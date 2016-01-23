@@ -7,13 +7,6 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-group :development, :test do
-  gem 'byebug'
-end
-group :development do
-  gem 'web-console', '~> 2.0'
-  gem 'spring'
-end
 gem 'bootstrap-sass'
 gem 'devise'
 gem 'devise-i18n'
@@ -24,23 +17,36 @@ gem 'pg'
 gem 'puma'
 gem 'sendgrid'
 gem 'simple_form'
+gem 'jquery-turbolinks'
+gem 'font-awesome-rails', '~> 4.5.0'
+gem 'bootswatch-rails'
+
 group :development do
+  gem 'mailcatcher'
+  gem 'web-console', '~> 2.0'
+  gem 'spring'
   gem 'html2haml'
+  gem 'erb2haml'
   gem 'hub', :require=>nil
   gem 'rails_layout'
   gem 'spring-commands-rspec'
 end
+
 group :development, :test do
+  gem 'quiet_assets'
+  gem 'byebug'
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'rspec-rails'
 end
-group :production do
-  gem 'rails_12factor'
-end
+
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'launchy'
   gem 'selenium-webdriver'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
