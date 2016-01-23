@@ -1,15 +1,15 @@
 !!!
 %html
   %head
-    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
-    %title= content_for?(:title) ? yield(:title) : 'Energyx'
-    %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Energyx'}"}
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title= content_for?(:title) ? yield(:title) : "My Application"
+    %meta{:content => "#{content_for?(:description) ? yield(:description) : "My Application"}", :name => "description"}/
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
     %header
-      = render 'layouts/navigation'
-    %main{:role => "main"}
-      = render 'layouts/messages'
-      = yield
+      = render 'layouts/navigation' unless current_page?(root_path)
+    = render 'layouts/messages'
+    = yield
