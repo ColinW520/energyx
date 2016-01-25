@@ -1,75 +1,101 @@
-.navbar.navbar-inverse.navbar-fixed-top{:role => "navigation"}
-  .container
-    .navbar-header
-      %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
-        %span.sr-only Toggle navigation
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      %a.navbar-brand{:href => "#"} EnergyX Fitness
-    .navbar-collapse.collapse
-      %ul.nav.navbar-nav.pull-right
-        %li
-          %a{:href => "#"} Services
-        %li
-          %a{:href => "#"} Sectors
-        %li
-          %a{:href => "#"} News
-        %li
-          %a{:href => "#"} About Us
-        %li
-          %a{:href => "#"} Contact Us
-    / /.navbar-collapse
-/ Main jumbotron for a primary marketing message or call to action
-.homepage-hero-module
-  .video-container
-    .title-container
-      .headline
-        = image_tag 'main_logo_png.png', class: 'img img-responsive'
-      .description
-        .inner San Antonio’s first rowing studio featuring ShockWave, IndoRow, TRX and Yoga
+%section#JumboLead
+  .homepage-hero-module
+    .video-container
+      .title-container
+        .headline.center-block
+          = image_tag 'energyx_logo_white.png', class: 'img-responsive center-block', id: 'jumbo_logo'
+          %br
+        .description.center-block
+          .inner Welcome to EnergyX Fitness, San Antonio’s first rowing studio featuring ShockWave, IndoRow, TRX and Yoga. We offer a wide variety of classes available to any age and any fitness level sure to target your fitness needs.
         %br
-        %a.btn.btn-primary{:href => "#", :role => "button"} Claim Free Class
-    .filter
-    %video.fillWidth{:autoplay => "", :loop => ""}
-      %source{:src => "http://dfcb.github.io/BigVideo.js/vids/dock.mp4", :type => "video/mp4"}>/
-      Your browser does not support the video tag. I suggest you upgrade your browser.
-    .poster.hidden
-      %img{:alt => "", :src => "http://www.videojs.com/img/poster.jpg"}
-#content.container
-  .row
-    .col-md-4
-      %h2 Heading
-      %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      %p
-        %a.btn.btn-info{:href => "#", :role => "button"} View details &raquo;
-    .col-md-4
-      %h2 Heading
-      %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      %p
-        %a.btn.btn-info{:href => "#", :role => "button"} View details &raquo;
-    .col-md-4
-      %h2 Heading
-      %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-      %p
-        %a.btn.btn-info{:href => "#", :role => "button"} View details &raquo;
-  .row
-    .col-md-4
-      %h2 Heading
-      %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      %p
-        %a.btn.btn-info{:href => "#", :role => "button"} View details &raquo;
-    .col-md-4
-      %h2 Heading
-      %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      %p
-        %a.btn.btn-info{:href => "#", :role => "button"} View details &raquo;
-    .col-md-4
-      %h2 Heading
-      %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-      %p
-        %a.btn.btn-info{:href => "#", :role => "button"} View details &raquo;
-  %hr
-    %footer
-      %p &copy; Company 2014
-/ /container
+          %a.btn.btn-lg.btn-success{:href => "#", :role => "button"} Book A Class
+          %a.btn.btn-lg.btn-success{:href => "#", :role => "button"} Free Classes
+          %a.btn.btn-lg.btn-success{:href => "#", :role => "button"} See Results
+      .filter
+      %video.fillWidth{:autoplay => "", :loop => ""}
+        %source{:src => "http://dfcb.github.io/BigVideo.js/vids/dock.mp4", :type => "video/mp4"}>/
+        Your browser does not support the video tag. I suggest you upgrade your browser.
+%section#SecondaryLead
+  .container
+    .row
+      .col-sm-3.col-md-3.col-lg-3
+        .panel.panel-primary#CallOutPanel
+          .panel-heading
+            %h3.panel-title.text-center Our Tools
+          .panel-body
+            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+          %br
+          .text-center
+            %a.btn.btn-lg.btn-success{:href => "#", :role => "button"} Try It Today
+          %br
+      .col-sm-9.col-md-9.col-lg-9
+
+%section#Supporting
+  #content.container
+    .row
+      .col-md-4
+        %h2 Heading
+        %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+        %p
+          %a.btn.btn-default{:href => "#", :role => "button"} View details &raquo;
+      .col-md-4
+        %h2 Heading
+        %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+        %p
+          %a.btn.btn-default{:href => "#", :role => "button"} View details &raquo;
+      .col-md-4
+        %h2 Heading
+        %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        %p
+          %a.btn.btn-default{:href => "#", :role => "button"} View details &raquo;
+    .row
+      .col-md-4
+        %h2 Heading
+        %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+        %p
+          %a.btn.btn-default{:href => "#", :role => "button"} View details &raquo;
+      .col-md-4
+        %h2 Heading
+        %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+        %p
+          %a.btn.btn-default{:href => "#", :role => "button"} View details &raquo;
+      .col-md-4
+        %h2 Heading
+        %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        %p
+          %a.btn.btn-default{:href => "#", :role => "button"} View details &raquo;
+%section#Supporting
+  #content.container
+    .row
+      .col-md-4
+        %h2 Heading
+        %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+        %p
+          %a.btn.btn-default{:href => "#", :role => "button"} View details &raquo;
+      .col-md-4
+        %h2 Heading
+        %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+        %p
+          %a.btn.btn-default{:href => "#", :role => "button"} View details &raquo;
+      .col-md-4
+        %h2 Heading
+        %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        %p
+          %a.btn.btn-default{:href => "#", :role => "button"} View details &raquo;
+    .row
+      .col-md-4
+        %h2 Heading
+        %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+        %p
+          %a.btn.btn-default{:href => "#", :role => "button"} View details &raquo;
+      .col-md-4
+        %h2 Heading
+        %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+        %p
+          %a.btn.btn-default{:href => "#", :role => "button"} View details &raquo;
+      .col-md-4
+        %h2 Heading
+        %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+        %p
+          %a.btn.btn-default{:href => "#", :role => "button"} View details &raquo;
+%section#Social
