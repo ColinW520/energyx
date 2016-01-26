@@ -46,3 +46,20 @@ $(document).ready ->
     scaleBannerVideoSize '.video-container .poster img'
     scaleBannerVideoSize '.video-container .filter'
     scaleBannerVideoSize '.video-container video'
+
+  $('#datetimepicker8').datetimepicker icons:
+    time: 'fa fa-clock-o'
+    date: 'fa fa-calendar'
+    up: 'fa fa-arrow-up'
+    down: 'fa fa-arrow-down'
+
+  # hide .navbar first
+  $('.navbar').hide()
+  # fade in .navbar
+  $ ->
+    $(window).scroll ->
+      # set distance user needs to scroll before we fadeIn navbar
+      if $(this).scrollTop() > 100
+        $('.navbar').fadeIn()
+      else
+        $('.navbar').fadeOut()

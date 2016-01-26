@@ -1,0 +1,18 @@
+%nav.navbar.navbar-default.navbar-fixed-top{:role => "navigation"}
+  .container
+    .navbar-header
+      %button.navbar-toggle{"data-target" => "#HeaderNavCollapse", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %i.fa.fa-navicon
+      %a.navbar-brand{:href => "#"}
+        = image_tag 'energyx_fitness_san_antonio.png', class: 'img img-responsive', id: 'HeaderLogo'
+    #HeaderNavCollapse.collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          %a{:href => "#"} About
+        %li
+          %a{:href => "#"} Memberships
+        %li
+          %a{:href => "#"} Contact
+    / /.navbar-collapse
+  / /.container-fluid

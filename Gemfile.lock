@@ -47,6 +47,8 @@ GEM
     bootstrap-sass (3.3.6)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
+    bootstrap3-datetimepicker-rails (4.17.37)
+      momentjs-rails (>= 2.8.1)
     bootswatch-rails (3.3.5)
       railties (>= 3.1)
     builder (3.2.2)
@@ -145,6 +147,8 @@ GEM
     mime-types (2.99)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
+    momentjs-rails (2.11.0)
+      railties (>= 3.1)
     multi_json (1.11.2)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
@@ -277,6 +281,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-sass
+  bootstrap3-datetimepicker-rails (~> 4.17.37)
   bootswatch-rails
   byebug
   capybara
@@ -298,6 +303,7 @@ DEPENDENCIES
   jquery-turbolinks
   launchy
   mailcatcher
+  momentjs-rails (>= 2.9.0)
   pg
   puma
   quiet_assets

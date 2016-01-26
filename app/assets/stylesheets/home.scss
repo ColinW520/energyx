@@ -2,13 +2,21 @@
   width: 33%;
 }
 
-#SecondaryLead {
+#HeaderLogo {
+  width: 20%;
+}
+
+#Tools {
   background: url(asset-path('background2.jpg')) no-repeat center center fixed;
   background-size: 100vw auto;
 }
 
 #CallOutPanel {
-  margin: 15vh 0vh 30vh 0vh;
+  margin: 5vh 0vh 35vh 0vh;
+}
+
+#Classes, #Coaches, #Results, #Social {
+  margin: 15vh 0vh 15vh 0vh;
 }
 
 .title-container .btn {

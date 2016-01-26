@@ -6,96 +6,100 @@
           = image_tag 'energyx_logo_white.png', class: 'img-responsive center-block', id: 'jumbo_logo'
           %br
         .description.center-block
-          .inner Welcome to EnergyX Fitness, San Antonio’s first rowing studio featuring ShockWave, IndoRow, TRX and Yoga. We offer a wide variety of classes available to any age and any fitness level sure to target your fitness needs.
+          .inner Welcome to EnergyX Fitness, San Antonio’s first rowing studio featuring ShockWave, IndoRow, TRX and Yoga. Your first class is free!
         %br
-          %a.btn.btn-lg.btn-success{:href => "#", :role => "button"} Book A Class
-          %a.btn.btn-lg.btn-success{:href => "#", :role => "button"} Free Classes
-          %a.btn.btn-lg.btn-success{:href => "#", :role => "button"} See Results
+          %a.btn.btn-lg.btn-success{:href => "https://clients.mindbodyonline.com/classic/home?studioid=226360", :role => "button"} Book A Class
+          %a.btn.btn-lg.btn-success{:href => "#Results", :role => "button"} See Results
       .filter
       %video.fillWidth{:autoplay => "", :loop => ""}
-        %source{:src => "http://dfcb.github.io/BigVideo.js/vids/dock.mp4", :type => "video/mp4"}>/
+        %source{:src => "http://dfcb.github.io/BigVideo.js/vids/dock.mp4", :type => "video/mp4"}>
         Your browser does not support the video tag. I suggest you upgrade your browser.
-%section#SecondaryLead
+
+%section#Tools
   .container
     .row
-      .col-sm-3.col-md-3.col-lg-3
-        .panel.panel-primary#CallOutPanel
-          .panel-heading
-            %h3.panel-title.text-center Our Tools
-          .panel-body
-            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-          %br
-          .text-center
-            %a.btn.btn-lg.btn-success{:href => "#", :role => "button"} Try It Today
-          %br
-      .col-sm-9.col-md-9.col-lg-9
+      .col-sm-4.col-md-4.col-lg-4
+        .pull-right
+          .panel.panel-primary#CallOutPanel
+            .panel-body
+              %h2
+                Your first class is
+                = succeed "" do
+                  %strong.text-success free.
+              %p Our dynamic classes will leave you feeling fit, empowered, and ready to achieve your goals.
+              %form.form-horizontal
+                %fieldset
+                  .form-group
+                    %label.col-lg-2.control-label{:for => "inputName"} Name
+                    .col-lg-10
+                      %input#inputName.form-control{:placeholder => "Name", :type => "text"}
+                  .form-group
+                    %label.col-lg-2.control-label{:for => "inputDate"} Date
+                    .col-lg-10
+                      #datetimepicker8.input-group.date
+                        %input#inputDate.form-control{:type => "text", :placeholder => "Date"}
+                        %span.input-group-addon
+                          %span.fa.fa-calendar
+                  .form-group
+                    %label.col-lg-2.control-label{:for => "inputEmail"} Email
+                    .col-lg-10
+                      %input#inputEmail.form-control{:placeholder => "Email", :type => "text"}
+                        .checkbox
+                          %label
+                            %input{:type => "checkbox"}
+                              Yes! Send me awesome emails
+                  .form-group
+                    .col-lg-12.text-center
+                      %button.btn.btn-success{:type => "submit"} Schedule Me
 
-%section#Supporting
-  #content.container
+%section#Classes
+  .section-title
     .row
-      .col-md-4
-        %h2 Heading
-        %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-        %p
-          %a.btn.btn-default{:href => "#", :role => "button"} View details &raquo;
-      .col-md-4
-        %h2 Heading
-        %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-        %p
-          %a.btn.btn-default{:href => "#", :role => "button"} View details &raquo;
-      .col-md-4
-        %h2 Heading
-        %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-        %p
-          %a.btn.btn-default{:href => "#", :role => "button"} View details &raquo;
+      .col-sm-12.col-md-12.col-lg-12
+        %h2.text-center Classes
+  .section-content
+    .container
+      .row
+        .col-sm-12.col-md-12.col-lg-12
+          %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+          %p
+            %a.btn.btn-default{:href => "#", :role => "button"} View details &raquo;
+
+%section#Coaches
+  .section-title
     .row
-      .col-md-4
-        %h2 Heading
-        %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-        %p
-          %a.btn.btn-default{:href => "#", :role => "button"} View details &raquo;
-      .col-md-4
-        %h2 Heading
-        %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-        %p
-          %a.btn.btn-default{:href => "#", :role => "button"} View details &raquo;
-      .col-md-4
-        %h2 Heading
-        %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-        %p
-          %a.btn.btn-default{:href => "#", :role => "button"} View details &raquo;
-%section#Supporting
-  #content.container
+      .col-sm-12.col-md-12.col-lg-12
+        %h2.text-center Coaches
+  .section-content
+    .container
+      .row
+        .col-sm-12.col-md-12.col-lg-12
+          %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+          %p
+            %a.btn.btn-default{:href => "#", :role => "button"} View details &raquo;
+
+%section#Results
+  .section-title
     .row
-      .col-md-4
-        %h2 Heading
-        %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-        %p
-          %a.btn.btn-default{:href => "#", :role => "button"} View details &raquo;
-      .col-md-4
-        %h2 Heading
-        %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-        %p
-          %a.btn.btn-default{:href => "#", :role => "button"} View details &raquo;
-      .col-md-4
-        %h2 Heading
-        %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-        %p
-          %a.btn.btn-default{:href => "#", :role => "button"} View details &raquo;
-    .row
-      .col-md-4
-        %h2 Heading
-        %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-        %p
-          %a.btn.btn-default{:href => "#", :role => "button"} View details &raquo;
-      .col-md-4
-        %h2 Heading
-        %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-        %p
-          %a.btn.btn-default{:href => "#", :role => "button"} View details &raquo;
-      .col-md-4
-        %h2 Heading
-        %p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-        %p
-          %a.btn.btn-default{:href => "#", :role => "button"} View details &raquo;
+      .col-sm-12.col-md-12.col-lg-12
+        %h2.text-center Results
+  .section-content
+    .container
+      .row
+        .col-sm-12.col-md-12.col-lg-12
+          %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+          %p
+            %a.btn.btn-default{:href => "#", :role => "button"} View details &raquo;
+
 %section#Social
+  .section-title
+    .row
+      .col-sm-12.col-md-12.col-lg-12
+        %h2.text-center Social
+  .section-content
+    .container
+      .row
+        .col-sm-12.col-md-12.col-lg-12
+          %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+          %p
+            %a.btn.btn-default{:href => "#", :role => "button"} View details &raquo;
