@@ -17,7 +17,6 @@ scaleBannerVideoSize = (element) ->
   windowHeight = $(window).height()
   videoWidth = undefined
   videoHeight = undefined
-  console.log windowHeight
   $(element).each ->
     videoAspectRatio = $(this).data('height') / $(this).data('width')
     windowAspectRatio = windowHeight / windowWidth
@@ -56,10 +55,15 @@ $(document).ready ->
   # hide .navbar first
   $('.navbar').hide()
   # fade in .navbar
-  $ ->
-    $(window).scroll ->
-      # set distance user needs to scroll before we fadeIn navbar
-      if $(this).scrollTop() > 100
-        $('.navbar').fadeIn()
-      else
-        $('.navbar').fadeOut()
+  $(window).scroll ->
+    # set distance user needs to scroll before we fadeIn navbar
+    if $(this).scrollTop() > $('.video-container').height() - 100
+      $('.navbar').fadeIn()
+    else
+      $('.navbar').fadeOut()
+
+
+  $('.caption').readmore
+    speed: 600
+    moreLink: '<a class="text-center" href="#">More <i class="fa fa-chevron-circle-down"></i></a>'
+    lessLink: '<a class="text-center" href="#">Less <i class="fa fa-chevron-circle-up"></a>'

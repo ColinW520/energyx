@@ -1,0 +1,50 @@
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.social-media{
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
+
+  li{
+    display: inline-block;
+    margin-right: 1rem;
+
+    &:last-child{
+      margin-right: 0;
+    }
+
+    a{
+      font-weight: bold;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.footer-nav{
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0;
+
+  li{
+    display: inline-block;
+    margin-right: 1rem;
+
+    &:last-child{
+      margin-right: 0;
+    }
+
+    a{
+      font-weight: bold;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+}
