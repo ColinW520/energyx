@@ -52,6 +52,9 @@ $(document).ready ->
     up: 'fa fa-arrow-up'
     down: 'fa fa-arrow-down'
 
+  $('.clickable').click ->
+    window.document.location = $(this).data('href')
+
   # hide .navbar first
   $('.navbar').hide()
   # fade in .navbar
