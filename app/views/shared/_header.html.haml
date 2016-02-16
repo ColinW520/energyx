@@ -1,18 +1,33 @@
 %nav.navbar.navbar-default.navbar-fixed-top{:role => "navigation"}
   .container
+    / Brand and toggle get grouped for better mobile display
     .navbar-header
-      %button.navbar-toggle{"data-target" => "#HeaderNavCollapse", "data-toggle" => "collapse", :type => "button"}
+      %button.navbar-toggle{"data-target" => "#navbar-brand-centered", "data-toggle" => "collapse", :type => "button"}
         %span.sr-only Toggle navigation
-        %i.fa.fa-navicon
-      %a.navbar-brand{:href => "#"}
-        = image_tag 'energyx_logo_white.png', class: 'img img-responsive', id: 'HeaderLogo'
-    #HeaderNavCollapse.collapse.navbar-collapse
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      .navbar-brand.navbar-brand-centered
+        %img{:src => asset_url('energyx_icon_white.png')}
+        %div{:style => "clear:both;"}
+    / Collect the nav links, forms, and other content for toggling
+    #navbar-brand-centered.collapse.navbar-collapse
+      %ul.nav.navbar-nav
+        %li
+          %a{href: "https://instagram.com/givetocure/", class: 'nav-link'}
+            %i.fa.fa-phone
+        %li.text-white
+          %a{href: "https://instagram.com/givetocure/", class: 'nav-link'}
+            %i.fa.fa-map-marker
+        %li
+          %a{href: "https://instagram.com/givetocure/", class: 'nav-link'}
+            %i.fa.fa-calendar
       %ul.nav.navbar-nav.navbar-right
         %li
-          %a.text-primary{:href => "#"} About
+          %a{:href => "#"} Results
         %li
-          %a.text-primary{:href => "#"} Memberships
+          %a{:href => "#"} Coaches
         %li
-          %a.text-primary{:href => "#"} Contact
+          %a{:href => "#"} About
     / /.navbar-collapse
   / /.container-fluid

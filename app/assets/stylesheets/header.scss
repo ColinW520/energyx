@@ -1,3 +1,51 @@
-#HeaderLogo {
-  width: 18%;
+.navbar-brand img{
+  height: 70%;
+}
+
+.navbar-default {
+  background-color: #303030;
+}
+
+@media screen and (min-width:767px){
+  .navbar-brand-centered {
+      position: absolute;
+      left: 50%;
+      display: block;
+      width: 160px;
+      text-align: center;
+      background-color: transparent;
+  }
+
+  .navbar-nav>li>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 18px;
+  }
+
+  .navbar-brand {
+    top: 0px;
+  }
+
+  .navbar-brand-centered {
+    height: 80px;
+  }
+
+  .navbar-default {
+    padding-top: 15px;
+  }
+}
+
+@media (max-width: 801px) {
+  .navbar-default{
+    padding-top:0;
+  }
+  .navbar-brand{
+    padding: 10px 10px;
+  }
+  .navbar-brand-centered{
+    height: 100px;
+  }
+  .navbar-toggle{
+    bottom:-20px;
+  }
 }

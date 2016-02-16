@@ -10,6 +10,7 @@
 # http://github.com/RailsApps/rails-composer/issues
 #----------------------------------------------------------------------------
 
+/.powrc
 # bundler state
 /.bundle
 /vendor/bundle/

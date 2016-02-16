@@ -18,7 +18,7 @@
 %section#Tools
   .container
     .row
-      .col-sm-4.col-md-4.col-lg-4
+      .col-xs-6.col-sm-6.col-md-4.col-lg-4
         .pull-right
           .panel.panel-success#CallOutPanel
             .panel-body
@@ -26,7 +26,7 @@
                 Your first class is
                 = succeed "" do
                   %strong.text-success free.
-              %p Our dynamic classes will leave you feeling fit, empowered, and ready to achieve your goals. Try your first one today.
+              %p Our dynamic classes will leave you feeling fit, empowered, and ready to achieve your goals. Try your first one for FREE today!
               %br
               %form.form-horizontal
                 %fieldset
@@ -57,82 +57,317 @@
   .section-title
     .row
       .col-sm-12.col-md-12.col-lg-12
-        %h2.text-center Schedule
+        %h1.text-center.section-header Schedule
   .section-content
     .container
       .row
-        - ['Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'Monday'].each do |day|
-          .col-sm-4.col-md-4.col-lg-4
-            %h4.text-center.bold= day
-            .panel.panel-info
-              %table.table.table-striped.table-hover
-                %thead
-                  %tr
-                    %th Starting
-                    %th Class
-                    %th Teacher
-                    %th Duration
-                    %th
-                %tbody
-                  %tr.clickable{"data-href" => "http://google.com"}
-                    %td 6:00 am
-                    %td
-                      %a Row & Flow
-                    %td Alison
-                    %td 1 hour
-                    %td
-                      = link_to '#' do
-                        %i.fa.fa-calendar
-                  %tr.clickable{"data-href" => "http://google.com"}
-                    %td 8:30 am
-                    %td
-                      %aVinyasa Yoga
-                    %td Katheryn
-                    %td 1 hour
-                    %td
-                      = link_to '#' do
-                        %i.fa.fa-calendar
-                  %tr.clickable{"data-href" => "http://google.com"}
-                    %td 12:00 pm
-                    %td PoweRow
-                    %td Alison
-                    %td 45 mins
-                    %td
-                      = link_to '#' do
-                        %i.fa.fa-calendar
-                  %tr.clickable{"data-href" => "http://google.com"}
-                    %td 4:30 pm
-                    %td
-                      %a Row & Flow
-                    %td Alison
-                    %td 1 hour
-                    %td
-                      = link_to '#' do
-                        %i.fa.fa-calendar
-                  %tr.clickable{"data-href" => "http://google.com"}
-                    %td 5:30 pm
-                    %td
-                      %a IndoRow
-                    %td Alison
-                    %td 45 mins
-                    %td
-                      = link_to '#' do
-                        %i.fa.fa-calendar
-                  %tr.clickable{"data-href" => "http://google.com"}
-                    %td 6:45 pm
-                    %td
-                      %a PoweRow
-                    %td Lizzy
-                    %td 1 hour
-                    %td
-                      = link_to '#' do
-                        %i.fa.fa-calendar
+        .col-xs-12.col-sm-6.col-md-4.col-lg-4
+          %h4.text-center.bold Monday
+          .panel.panel-info
+            %table.table
+              %thead
+                %tr
+                  %th Starting
+                  %th Class
+                  %th Duration
+                  %th
+              %tbody
+                %tr
+                  %td 6:00 AM
+                  %td Row & Flow
+                  %td 1 hour
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
+                %tr
+                  %td 8:30 AM
+                  %td Vinyasa Yoga
+                  %td 1 hour
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
+                %tr
+                  %td 12:00 PM
+                  %td PoweRow For Lunch
+                  %td 45 mins
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
+                %tr
+                  %td 4:30 PM
+                  %td Row & Flow
+                  %td 1 hour
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
+                %tr
+                  %td 5:30 PM
+                  %td IndoRow
+                  %td 45 mins
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
+                %tr
+                  %td 6:45 PM
+                  %td PoweRow
+                  %td 1 hour
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
+        .col-xs-12.col-sm-6.col-md-4.col-lg-4
+          %h4.text-center.bold Tuesday
+          .panel.panel-info
+            %table.table
+              %thead
+                %tr
+                  %th Starting
+                  %th Class
+                  %th Duration
+                  %th
+              %tbody
+                %tr
+                  %td 6:00 AM
+                  %td ShockWave
+                  %td 45 mins
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
+                %tr
+                  %td 9:45 AM
+                  %td PoweRow
+                  %td 1 hour
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
+                %tr
+                  %td 12:00 PM
+                  %td IndoRow For Lunch
+                  %td 30 mins
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
+                %tr
+                  %td 5:30 PM
+                  %td Row & Flow
+                  %td 1 hour
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
+                %tr
+                  %td 6:30 PM
+                  %td Vinyasa Yoga
+                  %td 1 hour
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
+        .col-xs-12.col-sm-6.col-md-4.col-lg-4
+          %h4.text-center.bold Wednesday
+          .panel.panel-info
+            %table.table
+              %thead
+                %tr
+                  %th Starting
+                  %th Class
+                  %th Duration
+                  %th
+              %tbody
+                %tr
+                  %td 6:00 AM
+                  %td Row & Flow
+                  %td 1 hour
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
+                %tr
+                  %td 8:30 AM
+                  %td Vinyasa Yoga
+                  %td 1 hour
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
+                %tr
+                  %td 12:00 PM
+                  %td PoweRow For Lunch
+                  %td 45 mins
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
+                %tr
+                  %td 4:45 PM
+                  %td ShockWave
+                  %td 45 mins
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
+                %tr
+                  %td 5:30 PM
+                  %td Vinyasa Yoga
+                  %td 1 hour
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
+                %tr
+                  %td 6:45 PM
+                  %td PoweRow
+                  %td 1 hour
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
+        .col-xs-12.col-sm-6.col-md-4.col-lg-4
+          %h4.text-center.bold Thursday
+          .panel.panel-info
+            %table.table
+              %thead
+                %tr
+                  %th Starting
+                  %th Class
+                  %th Duration
+                  %th
+              %tbody
+                %tr
+                  %td 6:00 AM
+                  %td ShockWave
+                  %td 45 mins
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
+                %tr
+                  %td 9:45 AM
+                  %td PoweRow
+                  %td 1 hour
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
+                %tr
+                  %td 12:00 PM
+                  %td IndoRow For Lunch
+                  %td 30 mins
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
+                %tr
+                  %td 5:30 PM
+                  %td ShockWave
+                  %td 45 mins
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
+                %tr
+                  %td 6:30 PM
+                  %td Row & Flow
+                  %td 1 hour
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
+                %tr
+                  %td 7:45 PM
+                  %td Fleet Feet Private Class
+                  %td 1 hour
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
+        .col-xs-12.col-sm-6.col-md-4.col-lg-4
+          %h4.text-center.bold Friday
+          .panel.panel-info
+            %table.table
+              %thead
+                %tr
+                  %th Starting
+                  %th Class
+                  %th Duration
+                  %th
+              %tbody
+                %tr
+                  %td 6:00 AM
+                  %td PoweRow
+                  %td 1 hour
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
+                %tr
+                  %td 8:30 AM
+                  %td IndoRow
+                  %td 45 mins
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
+                %tr
+                  %td 12:00 PM
+                  %td Yoga For Lunch
+                  %td 45 mins
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
+                %tr
+                  %td 5:30 PM
+                  %td ShockWave
+                  %td 45 mins
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
+        .col-xs-12.col-sm-6.col-md-4.col-lg-4
+          %h4.text-center.bold Saturday
+          .panel.panel-info
+            %table.table
+              %thead
+                %tr
+                  %th Starting
+                  %th Class
+                  %th Duration
+                  %th
+              %tbody
+                %tr
+                  %td 7:15 AM
+                  %td Row & Flow
+                  %td 1 hour
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
+                %tr
+                  %td 8:30 AM
+                  %td PoweRow
+                  %td 1 hour
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
+                %tr
+                  %td 9:45 AM
+                  %td ShockWave
+                  %td 45 mins
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
+        .col-xs-12.col-sm-6.col-md-4.col-lg-4
+          %h4.text-center.bold Sunday
+          .panel.panel-info
+            %table.table
+              %thead
+                %tr
+                  %th Starting
+                  %th Class
+                  %th Duration
+                  %th
+              %tbody
+                %tr
+                  %td 9:00 AM
+                  %td IndoRow
+                  %td 45 mins
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
+                %tr
+                  %td 10:00 AM
+                  %td Row & Flow
+                  %td 1 hour
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
 
 %section#Classes
   .section-title
     .row
       .col-sm-12.col-md-12.col-lg-12
-        %h2.text-center Classes
+        %h1.text-center.section-header Classes
   .section-content
     .container
       .row
@@ -145,14 +380,14 @@
   .section-title
     .row
       .col-sm-12.col-md-12.col-lg-12
-        %h2.text-center Pricing
+        %h1.text-center.section-header Pricing
   .section-content
     .container
       .row
         .col-sm-6.col-md-6.col-lg-6
           %h3.text-center.bold Packages
           .panel.panel-info
-            %table.table.table-striped.table-hover
+            %table.table
               %thead
                 %tr
                   %th # of Classes
@@ -178,7 +413,7 @@
         .col-sm-6.col-md-6.col-lg-6
           %h3.text-center.bold Memberships
           .panel.panel-info
-            %table.table.table-striped.table-hover
+            %table.table
               %thead
                 %tr
                   %th Duration
@@ -207,18 +442,18 @@
   .section-title
     .row
       .col-sm-12.col-md-12.col-lg-12
-        %h2.text-center Coaches
+        %h1.text-center.section-header Coaches
   .section-content
     .container
       .row
         #columns
-          .col-xs-12.col-sm-12.col-md-4.col-lg-4.col-xl-4
+          .col-xs-12.col-sm-6.col-md-3.col-lg-3.col-xl-4
             .thumbnail.info
               %img.img-responsive{:src => "https://energyxfitness.files.wordpress.com/2015/09/alison_headshot2.jpg"}
                 .caption
                   %h4.text-center.bold Alison Smith
                   %p As Owner and Creator of EnergyX Fitness, Alison’s passion for helping others drives the success of this Club.Alison has been in the Fitness Industry for 10 years working with athletes, college students, athletes of life, kids, older adults, and everything in between. Alison achieved her BS in Kinesiology from Texas A&M and MA in Exercise Sports Science from Texas State University. She currently works with BOSU as a Regional Master Trainer helping other fitness professional enhace their skills. In addition, she holds her RYT 200, NASM- CPT, AFAA Primary, and TRX Suspension, Group, and Sports Medicine Certifications. When Alison isn’t inspiring fitness to the world, she is spending time outside with her two dogs and inspiring boyfriend, Danny.
-          .col-xs-12.col-sm-12.col-md-4.col-lg-4.col-xl-4
+          .col-xs-12.col-sm-6.col-md-3.col-lg-3.col-xl-4
             .thumbnail.info
               %img.img-responsive{:src => "https://energyxfitness.files.wordpress.com/2015/09/headshot_danny2.jpg"}
                 .caption
@@ -226,25 +461,25 @@
                   %p Danny has been working in the fitness industry for over 10 years. His passion for creative approaches to overall health and wellness and bettering the lives of everyone he meets makes him a vital part of EnergyX Fitness. Danny earned his Master’s degree from Texas State University – San Marcos in Professional Counseling, and is a National Certified Counselor (NCC). 
                   %p He has worked with and helped children, teens and adults make lifestyle changes to improve their quality of life. He earned his Bachelor’s degree in Psychology and Exercise Sports Science from Texas Wesleyan University. He also holds TRX suspension and sports medicine certifications, Indo-Row and Shockwave certifications, and is an Onnit Academy Level 1 Certified Trainer. In addition to the general public, Danny has worked intensely with athletes as well as physically disabled individuals. 
                   %p He has had the pleasure of working for Wounded Warrior Project for the past several years, first as the Physical Health and Wellness Coordinator and now as a Combat Stress Recovery Specialist.His spare is spent enjoying the great outdoors with Alison and their two dogs.
-          .col-xs-12.col-sm-12.col-md-4.col-lg-4.col-xl-4
+          .col-xs-12.col-sm-6.col-md-3.col-lg-3.col-xl-4
             .thumbnail.info
               %img.img-responsive{:src => "https://energyxfitness.files.wordpress.com/2015/09/1headshot_katheryn.jpg"}
                 .caption
                   %h4.text-center.bold Katheryn
                   %p Katheryn’s love for yoga began in 2012. Shortly after, she began her official training through YogaFit and began teaching yoga at UTSA Campus Recreation. Her Vinyasa flow style class aims to help each participant celebrate their strengths, improve on their weaknesses, and find a sense of balance between resistance and relaxation. She aims to connect with each student throughout the class, and encourages everyone to reach their full potential.
-          .col-xs-12.col-sm-12.col-md-4.col-lg-4.col-xl-4
+          .col-xs-12.col-sm-6.col-md-3.col-lg-3.col-xl-4
             .thumbnail.info
               %img.img-responsive{:src => "https://energyxfitness.files.wordpress.com/2015/09/andrea1.jpg"}
                 .caption
                   %h4.text-center.bold Andrea Navarro
                   %p Andrea has been teaching Group Exercise for over 5 years. Her certifications include AFAA and YogaFit, among others in the fitness industry. She graduated from The University of Texas at Austin with a B.S. in Public Health and loves that she is able to encourage participants through their own health journey. She is known for her energetic teaching style and encouraging participants to reach goals and push limits. When away from the studio, Andrea is working on her MBA/MPH or spending time with her family.
-          .col-xs-12.col-sm-12.col-md-4.col-lg-4.col-xl-4
+          .col-xs-12.col-sm-6.col-md-3.col-lg-3.col-xl-4
             .thumbnail.info
               %img.img-responsive{:src => "https://energyxfitness.files.wordpress.com/2015/09/1headshot_alex.jpg"}
                 .caption
                   %h4.text-center.bold Alex Alcala
                   %p Alex Alcala is a six year Navy veteran and fitness enthusiast. As a U.S. Navy Fitness Leader, he has trained the our military’s men and women designing exercise programs that ensure their highest standards of physical fitness. After separating from the military, Alex enrolled at The University of Texas at San Antonio and has worked as a personal trainer for UTSA Campus Recreation, developing individualized instruction plans to match the skills and learning levels of participants.
-          .col-xs-12.col-sm-12.col-md-4.col-lg-4.col-xl-4
+          .col-xs-12.col-sm-6.col-md-3.col-lg-3.col-xl-4
             .thumbnail.info
               %img.img-responsive{:src => "https://energyxfitness.files.wordpress.com/2015/09/1headshot_lizy1.jpg"}
                 .caption
@@ -255,7 +490,7 @@
   .section-title
     .row
       .col-sm-12.col-md-12.col-lg-12
-        %h2.text-center Results
+        %h1.text-center.section-header Results
   .section-content
     .container
       .row
@@ -268,7 +503,7 @@
   .section-title
     .row
       .col-sm-12.col-md-12.col-lg-12
-        %h2.text-center Social
+        %h1.text-center.section-header Social
   .section-content
     .container
       .row
