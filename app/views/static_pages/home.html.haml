@@ -12,9 +12,10 @@
           %a.btn.btn-lg.btn-success{:href => "https://clients.mindbodyonline.com/classic/home?studioid=226360", :role => "button"} Book A Class
           %a.btn.btn-lg.btn-success{:href => "#Results", :role => "button"} See Results
       .filter
-      %video.fillWidth{:autoplay => "", :loop => ""}
-        %source{:src => asset_url('BGLoop_01.mp4'), :type => "video/mp4"}>
-        Your browser does not support the video tag. I suggest you upgrade your browser.
+      %video.loop.fillWidth{:autoplay => "true", :loop => "true", :poster => asset_url('video_poster.png'), :tabindex => "0"}
+        %source{:src => asset_url('BGLoop_01.mp4'), :type => "video/webm"}
+        %source{:src => "https://d2xy5qvxyo4wme.cloudfront.net/assets/vid/first_slide_desktop.mp4?v=1", :type => "video/mp4"}
+
 
 %section#Tools
   .container
