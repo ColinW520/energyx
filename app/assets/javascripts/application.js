@@ -17,4 +17,5 @@
 //= require moment
 //= require bootstrap-datetimepicker
 //= require readmore
+//= require html5video
 //= require_tree .
