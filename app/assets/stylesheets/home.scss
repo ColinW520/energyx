@@ -5,6 +5,39 @@
   font-weight: bold;
 }
 
+body#static_pages_home{
+  .homepage-hero-module {
+    border-right: none;
+    border-left: none;
+    position: relative;
+  }
+
+  #CalendarAddon {
+    font-weight: bold;
+    color: #4CAF50;
+    border-color: #fff;
+    background-color: #fff;
+  }
+
+  #BgDiv1 {
+    background: url(asset-path('trx-lean.jpg')) no-repeat center center fixed;
+    background-size: 100vw auto;
+    min-height: 40vh;
+  }
+
+  #BgDiv2 {
+    background: url(asset-path('yoga_wide.jpg')) no-repeat center center fixed;
+    background-size: 100vw auto;
+    min-height: 40vh;
+  }
+
+  #BgDiv3 {
+    background: url(asset-path('group.jpg')) no-repeat center center fixed;
+    background-size: 100vw auto;
+    min-height: 40vh;
+  }
+}
+
 #Schedule {
   h4 {
     color: #2F7CC0;
@@ -17,7 +50,7 @@
 
 #Tools {
   background: url(asset-path('water_rower_background.png')) no-repeat center center fixed;
-  background-size: 100vw auto;
+  background-size: 100vw;
 }
 
 #CallOutPanel {

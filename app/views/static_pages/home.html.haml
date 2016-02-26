@@ -42,7 +42,7 @@
                     .col-lg-10
                       #datetimepicker8.input-group.date
                         %input#inputDate.form-control{:type => "text", :placeholder => "Date"}
-                        %span.input-group-addon
+                        %span.input-group-addon#CalendarAddon
                           %span.fa.fa-calendar
                   .form-group.has-success
                     %label.col-lg-2.control-label{:for => "inputEmail"} Email
@@ -362,6 +362,8 @@
                       %i.fa.fa-calendar
         .col-sm-1.col-md-1.col-lg-1
 
+#BgDiv1
+
 %section#Classes
   .section-title
     .row
@@ -370,57 +372,54 @@
   .section-content
     .container
       .row
-        .col-sm-4.col-md-4.col-lg-4
+        .col-sm-6.col-md-6.col-lg-6
           .row
-            .col-sm-6.col-md-6.col-lg-6
-              %br
-              %img.img-responsive.img-rounded{:src => "http://placehold.it/250x450"}
-            .col-sm-6.col-md-6.col-lg-6
+            .col-sm-8.col-md-8.col-lg-8
+              %img.img-responsive.img-rounded{:src => "http://placehold.it/300x450"}
+            .col-sm-4.col-md-4.col-lg-4
               %h5 Row Clinic
               %p New to rowing or want to improve you stroke? Row Clinic is the place to be. Always free and a great place for new participants to start.
-        .col-sm-4.col-md-4.col-lg-4
+        .col-sm-6.col-md-6.col-lg-6
           .row
-            .col-sm-6.col-md-6.col-lg-6
-              %br
-              %img.img-responsive.img-rounded{:src => "http://placehold.it/250x450"}
-            .col-sm-6.col-md-6.col-lg-6
+            .col-sm-8.col-md-8.col-lg-8
+              %img.img-responsive.img-rounded{:src => "http://placehold.it/300x450"}
+            .col-sm-4.col-md-4.col-lg-4
               %h5 PoweRow
               %p Challenge your entire body with the dynamic duo of rowing and strength using our state of the art WaterRowers, TRX Suspension Trainers, and Kettlebells.
-        .col-sm-4.col-md-4.col-lg-4
-          .row
-            .col-sm-6.col-md-6.col-lg-6
-              %br
-              %img.img-responsive.img-rounded{:src => "http://placehold.it/250x450"}
-            .col-sm-6.col-md-6.col-lg-6
-              %h5 Row & Flow
-              %p The best of all 3 worlds, Row & Flow offers high intensity rowing and strength intervals followed by athletic based yoga sure to enhance flexible and clear the mind.
       %br
       .row
-        .col-sm-4.col-md-4.col-lg-4
+        .col-sm-6.col-md-6.col-lg-6
           .row
-            .col-sm-6.col-md-6.col-lg-6
-              %br
-              %img.img-responsive.img-rounded{:src => "http://placehold.it/250x450"}
-            .col-sm-6.col-md-6.col-lg-6
+            .col-sm-8.col-md-8.col-lg-8
+              %img.img-responsive.img-rounded{:src => "http://placehold.it/300x450"}
+            .col-sm-4.col-md-4.col-lg-4
+              %h5 Row & Flow
+              %p The best of all 3 worlds, Row & Flow offers high intensity rowing and strength intervals followed by athletic based yoga sure to enhance flexible and clear the mind.
+        .col-sm-6.col-md-6.col-lg-6
+          .row
+            .col-sm-8.col-md-8.col-lg-8
+              %img.img-responsive.img-rounded{:src => "http://placehold.it/300x450"}
+            .col-sm-4.col-md-4.col-lg-4
               %h5 Shockwave
               %p ShockWave is extreme cross-training at its best! This circuit challenge utilizes a specially designed WaterRower to provide short-burst, high-intensity, calorie-torching intervals along with functional strength and sculpting stations.
-        .col-sm-4.col-md-4.col-lg-4
+      %br
+      .row
+        .col-sm-6.col-md-6.col-lg-6
           .row
-            .col-sm-6.col-md-6.col-lg-6
-              %br
-              %img.img-responsive.img-rounded{:src => "http://placehold.it/250x450"}
-            .col-sm-6.col-md-6.col-lg-6
+            .col-sm-8.col-md-8.col-lg-8
+              %img.img-responsive.img-rounded{:src => "http://placehold.it/300x450"}
+            .col-sm-4.col-md-4.col-lg-4
               %h5 Vinyasa Yoga
               %p Use breath to move you from asana to asana creating a flowing practice focusing on strength, flexibly, and balance. Leave feeling strong, refreshed, and ready to take on the world!
-        .col-sm-4.col-md-4.col-lg-4
+        .col-sm-6.col-md-6.col-lg-6
           .row
-            .col-sm-6.col-md-6.col-lg-6
-              %br
-              %img.img-responsive.img-rounded{:src => "http://placehold.it/250x450"}
-            .col-sm-6.col-md-6.col-lg-6
+            .col-sm-8.col-md-8.col-lg-8
+              %img.img-responsive.img-rounded{:src => "http://placehold.it/300x450"}
+            .col-sm-4.col-md-4.col-lg-4
               %h5 IndoRow
               %p Fast-paced and engaging from the first minute, Indorow is the perfect calorie burn. Endurance, sprints, and team challenges will keep your heart pumping and body working. Come experience the best cardio on our state-of-the-art WaterRowers.
 
+#BgDiv2
 
 %section#Memberships
   .section-title
@@ -483,7 +482,6 @@
                   %td $1400
                   %td= link_to 'Select', '#', class: 'btn btn-xs btn-success'
 
-
 %section#Coaches
   .section-title
     .row
@@ -532,7 +530,9 @@
                   %h4.text-center.bold Lizzy Holloway
                   %p Lizy Holloway is a certified AFAA group exercise and Schwinn cycle certified instructor who has been teaching since Spring of 2010. She has a Kinesiology degree from Texas A&M University where she was a group exercise instructor and personal trainer until 2014. Since, she has taught group exercise at The University of Texas at San Antonio. Lizy is also a 4-time TexFit presenter of multiple class formats including high intensity interval training and cycle. She is experienced in teaching cycle, step, water aerobics, total body toning classes, and high intensity interval training classes.
 
-%section#About
+#BgDiv3
+
+%section#Results
   .section-title
     .row
       .col-sm-12.col-md-12.col-lg-12
