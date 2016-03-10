@@ -1,6 +1,64 @@
 body#static_pages_home{
-  h4 {
-    color: #2F7CC0;
+  /* Carousel */
+  #jumbo_logo {
+    width: 50%;
+  }
+
+  #quote-carousel {
+      /* Control buttons  */
+      /* Previous button  */
+      /* Next button  */
+      /* Changes the position of the indicators */
+      /* Changes the color of the indicators */
+  }
+  #quote-carousel .carousel-control {
+      background: none;
+      color: #CACACA;
+      font-size: 2.3em;
+      text-shadow: none;
+      margin-top: 30px;
+  }
+  #quote-carousel .carousel-control.left {
+      left: -60px;
+  }
+  #quote-carousel .carousel-control.right {
+      right: -60px;
+  }
+  #quote-carousel .carousel-indicators {
+      right: 50%;
+  }
+  #quote-carousel .carousel-indicators li {
+      width: 75px;
+      height: 75px;
+      margin: 5px;
+      cursor: pointer;
+      border: 4px solid #CCC;
+      border-radius: 50px;
+      opacity: 0.4;
+      overflow: hidden;
+      transition: all 0.4s;
+  }
+  #quote-carousel .carousel-indicators .active {
+      background: #333333;
+      width: 128px;
+      height: 128px;
+      border-radius: 100px;
+      border-color: #f33;
+      opacity: 1;
+      overflow: hidden;
+  }
+  .carousel-inner {
+      min-height: 300px;
+  }
+  .item blockquote {
+      border-left: none;
+      margin: 0;
+  }
+  .item blockquote p:before {
+      content: "\f10d";
+      font-family: 'Fontawesome';
+      float: left;
+      margin-right: 10px;
   }
 
   .homepage-hero-module {
@@ -30,21 +88,31 @@ body#static_pages_home{
     background-size: 100vw auto;
     min-height: 50vh;
   }
-}
+  /* end home selector */
 
-#Classes {
-  .panel-image img.panel-image-preview {
-    width: 100%;
-    border-radius: 4px 4px 0px 0px;
+    #Classes {
+    .panel-image {
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 50%;
+    }
+
+    .panel-image img.panel-image-preview {
+      width: 100%;
+      border-radius: 4px 4px 0px 0px;
+      max-height: 250px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+
+    .panel-body {
+      overflow: hidden;
+    }
   }
-
-  .panel {
-    height: 35vh;
-  }
-}
-
-#jumbo_logo {
-  width: 50%;
 }
 
 #Tools {
