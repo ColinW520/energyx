@@ -12,7 +12,7 @@
           %a.btn.btn-lg.btn-success.bold{:href => "https://clients.mindbodyonline.com/classic/home?studioid=226360", :role => "button"} Book A Class
           %a.btn.btn-lg.btn-success.bold{:href => "#Results", :role => "button"} See Results
       .filter
-      %video.loop.fullWidth{:autoplay => "autoplay", :loop => "loop", :poster => asset_url('video_poster.png'), :style => "width:100%", :title => "EnergyX Background Video"}
+      %video.loop.fullWidth{:autoplay => "autoplay", :loop => "loop", :poster => asset_url('indow_row.png'), :style => "width:100%", :title => "EnergyX Background Video"}
         %source{:src => asset_url("BGLoop_01.webm"), :type => "video/webm"}
         %source{:src => asset_url("BGLoop_01.ogv"), :type => "video/ogg"}
         %source{:src => asset_url("BGLoop_01.mp4")}
@@ -350,7 +350,6 @@
                   %td
                     = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
                       %i.fa.fa-calendar
-        .col-sm-1.col-md-1.col-lg-1
 
 %section#BgDiv1
 
@@ -362,52 +361,49 @@
   .section-content
     .container
       .row
-        .col-sm-6.col-md-6.col-lg-6
-          .row
-            .col-sm-8.col-md-8.col-lg-8
-              %img.img-responsive.img-rounded{:src => "http://placehold.it/300x450"}
-            .col-sm-4.col-md-4.col-lg-4
-              %h5 Row Clinic
+        .col-xs-12.col-sm-6.col-md-4
+          .panel.panel-default
+            .panel-image
+              %img.img-responsive{src: asset_url('row_clinic.jpg')}
+            .panel-body
+              %h4.text-center Row Clinic
               %p New to rowing or want to improve you stroke? Row Clinic is the place to be. Always free and a great place for new participants to start.
-        .col-sm-6.col-md-6.col-lg-6
-          .row
-            .col-sm-8.col-md-8.col-lg-8
-              %img.img-responsive.img-rounded{:src => "http://placehold.it/300x450"}
-            .col-sm-4.col-md-4.col-lg-4
-              %h5 PoweRow
+        .col-xs-12.col-sm-6.col-md-4
+          .panel.panel-default
+            .panel-image
+              %img.img-responsive{src: asset_url('powerow.jpg')}
+            .panel-body
+              %h4.text-center PoweRow
               %p Challenge your entire body with the dynamic duo of rowing and strength using our state of the art WaterRowers, TRX Suspension Trainers, and Kettlebells.
-      %br
-      .row
-        .col-sm-6.col-md-6.col-lg-6
-          .row
-            .col-sm-8.col-md-8.col-lg-8
-              %img.img-responsive.img-rounded{:src => "http://placehold.it/300x450"}
-            .col-sm-4.col-md-4.col-lg-4
-              %h5 Row & Flow
+        .col-xs-12.col-sm-6.col-md-4
+          .panel.panel-default
+            .panel-image
+              %img.img-responsive{src: asset_url('row_flow.jpg')}
+            .panel-body
+              %h4.text-center Row & Flow
               %p The best of all 3 worlds, Row & Flow offers high intensity rowing and strength intervals followed by athletic based yoga sure to enhance flexible and clear the mind.
-        .col-sm-6.col-md-6.col-lg-6
-          .row
-            .col-sm-8.col-md-8.col-lg-8
-              %img.img-responsive.img-rounded{:src => "http://placehold.it/300x450"}
-            .col-sm-4.col-md-4.col-lg-4
-              %h5 Shockwave
+        .col-xs-12.col-sm-6.col-md-4
+          .panel.panel-default
+            .panel-image
+              %img.img-responsive{src: asset_url('shockwave.jpg')}
+            .panel-body
+              %h4.text-center Shockwave
               %p ShockWave is extreme cross-training at its best! This circuit challenge utilizes a specially designed WaterRower to provide short-burst, high-intensity, calorie-torching intervals along with functional strength and sculpting stations.
-      %br
-      .row
-        .col-sm-6.col-md-6.col-lg-6
-          .row
-            .col-sm-8.col-md-8.col-lg-8
-              %img.img-responsive.img-rounded{:src => "http://placehold.it/300x450"}
-            .col-sm-4.col-md-4.col-lg-4
-              %h5 Vinyasa Yoga
+        .col-xs-12.col-sm-6.col-md-4
+          .panel.panel-default
+            .panel-image
+              %img.img-responsive{src: asset_url('yoga.jpg')}
+            .panel-body
+              %h4.text-center Vinyasa Yoga
               %p Use breath to move you from asana to asana creating a flowing practice focusing on strength, flexibly, and balance. Leave feeling strong, refreshed, and ready to take on the world!
-        .col-sm-6.col-md-6.col-lg-6
-          .row
-            .col-sm-8.col-md-8.col-lg-8
-              %img.img-responsive.img-rounded{:src => "http://placehold.it/300x450"}
-            .col-sm-4.col-md-4.col-lg-4
-              %h5 IndoRow
+        .col-xs-12.col-sm-6.col-md-4
+          .panel.panel-default
+            .panel-image
+              %img.img-responsive{src: asset_url('indo_row.jpg')}
+            .panel-body
+              %h4.text-center IndoRow
               %p Fast-paced and engaging from the first minute, Indorow is the perfect calorie burn. Endurance, sprints, and team challenges will keep your heart pumping and body working. Come experience the best cardio on our state-of-the-art WaterRowers.
+
 
 %section#BgDiv2
 

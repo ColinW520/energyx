@@ -1,4 +1,8 @@
 body#static_pages_home{
+  h4 {
+    color: #2F7CC0;
+  }
+
   .homepage-hero-module {
     border-right: none;
     border-left: none;
@@ -28,9 +32,14 @@ body#static_pages_home{
   }
 }
 
-#Schedule {
-  h4 {
-    color: #2F7CC0;
+#Classes {
+  .panel-image img.panel-image-preview {
+    width: 100%;
+    border-radius: 4px 4px 0px 0px;
+  }
+
+  .panel {
+    height: 35vh;
   }
 }
 
