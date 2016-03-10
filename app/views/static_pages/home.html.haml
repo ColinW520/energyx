@@ -7,10 +7,10 @@
           = image_tag 'energyx_logo_white.png', class: 'img-responsive center-block', id: 'jumbo_logo'
           %br
         .description.center-block
-          .inner Welcome to EnergyX Fitness, San Antonio’s first rowing studio featuring ShockWave, IndoRow, TRX and Yoga. Your first class is free!
+          .inner Welcome to EnergyX Fitness, San Antonio’s first rowing studio featuring ShockWave, Body Weight Training, IndoRow, TRX and Yoga.
         %br
-          %a.btn.btn-lg.btn-success{:href => "https://clients.mindbodyonline.com/classic/home?studioid=226360", :role => "button"} Book A Class
-          %a.btn.btn-lg.btn-success{:href => "#Results", :role => "button"} See Results
+          %a.btn.btn-lg.btn-success.bold{:href => "https://clients.mindbodyonline.com/classic/home?studioid=226360", :role => "button"} Book A Class
+          %a.btn.btn-lg.btn-success.bold{:href => "#Results", :role => "button"} See Results
       .filter
       %video.loop.fullWidth{:autoplay => "autoplay", :loop => "loop", :poster => asset_url('video_poster.png'), :style => "width:100%", :title => "EnergyX Background Video"}
         %source{:src => asset_url("BGLoop_01.webm"), :type => "video/webm"}
@@ -21,7 +21,7 @@
 %section#Tools
   .container
     .row
-      .col-xs-6.col-sm-6.col-md-4.col-lg-4
+      .col-xs-12.col-sm-6.col-md-4.col-lg-4
         .pull-right
           .panel.panel-success#CallOutPanel
             .panel-body
@@ -30,23 +30,13 @@
                 = succeed "" do
                   %strong.text-success free.
               %p Our dynamic classes will leave you feeling fit, empowered, and ready to achieve your goals. Try your first one for FREE today!
-              %br
               %form.form-horizontal
                 %fieldset
                   .form-group.has-success
-                    %label.col-lg-2.control-label{:for => "inputName"} Name
-                    .col-lg-10
+                    .col-lg-12
                       %input#inputName.form-control{:placeholder => "Name", :type => "text"}
                   .form-group.has-success
-                    %label.col-lg-2.control-label{:for => "inputDate"} Date
-                    .col-lg-10
-                      #datetimepicker8.input-group.date
-                        %input#inputDate.form-control{:type => "text", :placeholder => "Date"}
-                        %span.input-group-addon#CalendarAddon
-                          %span.fa.fa-calendar
-                  .form-group.has-success
-                    %label.col-lg-2.control-label{:for => "inputEmail"} Email
-                    .col-lg-10
+                    .col-lg-12
                       %input#inputEmail.form-control{:placeholder => "Email", :type => "text"}
                         .checkbox
                           %label
@@ -54,7 +44,7 @@
                               Yes! Send me awesome emails
                   .form-group
                     .col-lg-12.text-center
-                      %button.btn.btn-success{:type => "submit"} Schedule Me
+                      %button.btn.btn-success.bold{:type => "submit"} Schedule
 
 %section#Schedule
   .section-title
@@ -362,7 +352,7 @@
                       %i.fa.fa-calendar
         .col-sm-1.col-md-1.col-lg-1
 
-#BgDiv1
+%section#BgDiv1
 
 %section#Classes
   .section-title
@@ -419,7 +409,7 @@
               %h5 IndoRow
               %p Fast-paced and engaging from the first minute, Indorow is the perfect calorie burn. Endurance, sprints, and team challenges will keep your heart pumping and body working. Come experience the best cardio on our state-of-the-art WaterRowers.
 
-#BgDiv2
+%section#BgDiv2
 
 %section#Memberships
   .section-title
@@ -530,7 +520,7 @@
                   %h4.text-center.bold Lizzy Holloway
                   %p Lizy Holloway is a certified AFAA group exercise and Schwinn cycle certified instructor who has been teaching since Spring of 2010. She has a Kinesiology degree from Texas A&M University where she was a group exercise instructor and personal trainer until 2014. Since, she has taught group exercise at The University of Texas at San Antonio. Lizy is also a 4-time TexFit presenter of multiple class formats including high intensity interval training and cycle. She is experienced in teaching cycle, step, water aerobics, total body toning classes, and high intensity interval training classes.
 
-#BgDiv3
+%section#BgDiv3
 
 %section#Results
   .section-title

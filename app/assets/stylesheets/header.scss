@@ -3,10 +3,36 @@
 }
 
 .navbar-default {
+  color: #fff;
+}
+
+.navbar-default {
   background-color: #303030;
 }
 
-@media screen and (min-width:767px){
+.navbar-toggle {
+  .icon-bar {
+    color: #ffffff;
+  }
+}
+
+.navbar-nav {
+  list-style: none;
+
+  li {
+
+    a {
+      text-transform: uppercase;
+      color: #fff !important;
+
+      &:hover {
+        color:  !important;
+      }
+    }
+  }
+}
+
+@media screen and (min-width:767px) {
   .navbar-brand-centered {
       position: absolute;
       left: 50%;

@@ -1,10 +1,3 @@
-.section-header {
-  padding-top: 15px;
-  padding-bottom: 30px;
-  color: #2F7CC0;
-  font-weight: bold;
-}
-
 body#static_pages_home{
   .homepage-hero-module {
     border-right: none;
@@ -12,29 +5,26 @@ body#static_pages_home{
     position: relative;
   }
 
-  #CalendarAddon {
-    font-weight: bold;
-    color: #4CAF50;
-    border-color: #fff;
-    background-color: #fff;
+  .btn {
+    margin: 10px;
   }
 
   #BgDiv1 {
     background: url(asset-path('trx-lean.jpg')) no-repeat center center fixed;
     background-size: 100vw auto;
-    min-height: 40vh;
+    min-height: 50vh;
   }
 
   #BgDiv2 {
     background: url(asset-path('yoga_wide.jpg')) no-repeat center center fixed;
     background-size: 100vw auto;
-    min-height: 40vh;
+    min-height: 50vh;
   }
 
   #BgDiv3 {
     background: url(asset-path('group.jpg')) no-repeat center center fixed;
     background-size: 100vw auto;
-    min-height: 40vh;
+    min-height: 50vh;
   }
 }
 
@@ -45,7 +35,7 @@ body#static_pages_home{
 }
 
 #jumbo_logo {
-  width: 33%;
+  width: 50%;
 }
 
 #Tools {
@@ -55,14 +45,6 @@ body#static_pages_home{
 
 #CallOutPanel {
   margin: 10vh 0vh 45vh 0vh;
-}
-
-#Classes, #Coaches, #Results, #Social {
-  margin: 8vh 0vh 15vh 0vh;
-}
-
-.title-container .btn {
-  margin: 20px;
 }
 
 .homepage-hero-module {
@@ -100,7 +82,7 @@ body#static_pages_home{
 .video-container .filter {
   z-index: 100;
   position: absolute;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6);
   width: 100%;
 }
 
@@ -108,14 +90,14 @@ body#static_pages_home{
   z-index: 1000;
   position: absolute;
   top: 35%;
-  width: 100%;
   text-align: center;
   color: #fff;
 }
 
 .video-container .description .inner {
-  font-size: 1em;
-  width: 45%;
+  font-size: 2em;
+  font-weight: bold;
+  width: 75%;
   margin: 0 auto;
 }
 
@@ -141,37 +123,4 @@ body#static_pages_home{
 
 .video-container video.fillWidth {
   width: 100%;
-}
-
-#fade-quote-carousel.carousel {
-  padding-bottom: 60px;
-}
-#fade-quote-carousel.carousel .carousel-inner .item {
-  opacity: 0;
-  -webkit-transition-property: opacity;
-      -ms-transition-property: opacity;
-          transition-property: opacity;
-}
-#fade-quote-carousel.carousel .carousel-inner .active {
-  opacity: 1;
-  -webkit-transition-property: opacity;
-      -ms-transition-property: opacity;
-          transition-property: opacity;
-}
-#fade-quote-carousel.carousel .carousel-indicators {
-  bottom: 10px;
-}
-#fade-quote-carousel.carousel .carousel-indicators > li {
-  background-color: #e84a64;
-  border: none;
-}
-#fade-quote-carousel blockquote {
-    text-align: center;
-    border: none;
-}
-#fade-quote-carousel .profile-circle {
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
-    border-radius: 100px;
 }
