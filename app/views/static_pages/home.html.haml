@@ -12,11 +12,10 @@
           %a.btn.btn-lg.btn-success.bold{:href => "https://clients.mindbodyonline.com/classic/home?studioid=226360", :role => "button"} Book A Class
           %a.btn.btn-lg.btn-success.bold{:href => "#Results", :role => "button"} See Results
       .filter
-      %video.loop.fullWidth{:autoplay => "autoplay", :loop => "loop", :poster => asset_url('indow_row.png'), :style => "width:100%", :title => "EnergyX Background Video"}
+      %video.loop.fullWidth{:autoplay => "autoplay", :loop => "loop", :poster => image_url('indow_row.png'), :style => "width:100%", :title => "EnergyX Background Video"}
         %source{:src => asset_url("BGLoop_01.webm"), :type => "video/webm"}
         %source{:src => asset_url("BGLoop_01.ogv"), :type => "video/ogg"}
         %source{:src => asset_url("BGLoop_01.mp4")}
-
 
 %section#Tools
   .container
@@ -56,7 +55,7 @@
       .row
         .col-xs-12.col-sm-6.col-md-3.col-lg-3
           %h4.text-center.bold Monday
-          .panel.panel-info
+          .panel.panel-info.schedule-panel
             %table.table
               %thead
                 %tr
@@ -109,7 +108,7 @@
                       %i.fa.fa-calendar
         .col-xs-12.col-sm-6.col-md-3.col-lg-3
           %h4.text-center.bold Tuesday
-          .panel.panel-info
+          .panel.panel-info.schedule-panel
             %table.table
               %thead
                 %tr
@@ -155,7 +154,7 @@
                       %i.fa.fa-calendar
         .col-xs-12.col-sm-6.col-md-3.col-lg-3
           %h4.text-center.bold Wednesday
-          .panel.panel-info
+          .panel.panel-info.schedule-panel
             %table.table
               %thead
                 %tr
@@ -208,7 +207,7 @@
                       %i.fa.fa-calendar
         .col-xs-12.col-sm-6.col-md-3.col-lg-3
           %h4.text-center.bold Thursday
-          .panel.panel-info
+          .panel.panel-info.schedule-panel
             %table.table
               %thead
                 %tr
@@ -256,7 +255,7 @@
         .col-sm-1.col-md-1.col-lg-1
         .col-xs-12.col-sm-6.col-md-3.col-lg-3
           %h4.text-center.bold Friday
-          .panel.panel-info
+          .panel.panel-info.schedule-panel
             %table.table
               %thead
                 %tr
@@ -295,7 +294,7 @@
                       %i.fa.fa-calendar
         .col-xs-12.col-sm-6.col-md-3.col-lg-3
           %h4.text-center.bold Saturday
-          .panel.panel-info
+          .panel.panel-info.schedule-panel
             %table.table
               %thead
                 %tr
@@ -327,7 +326,7 @@
                       %i.fa.fa-calendar
         .col-xs-12.col-sm-6.col-md-3.col-lg-3
           %h4.text-center.bold Sunday
-          .panel.panel-info
+          .panel.panel-info.schedule-panel
             %table.table
               %thead
                 %tr
@@ -479,13 +478,13 @@
     .container
       .row
         #columns
-          .col-xs-12.col-sm-6.col-md-3.col-lg-3.col-xl-4
+          .col-xs-12.col-sm-6.col-md-3.col-lg-4.col-xl-4
             .thumbnail.info
               %img.img-responsive{:src => "https://energyxfitness.files.wordpress.com/2015/09/alison_headshot2.jpg"}
                 .caption
                   %h4.text-center.bold Alison Smith
                   %p As Owner and Creator of EnergyX Fitness, Alison’s passion for helping others drives the success of this Club.Alison has been in the Fitness Industry for 10 years working with athletes, college students, athletes of life, kids, older adults, and everything in between. Alison achieved her BS in Kinesiology from Texas A&M and MA in Exercise Sports Science from Texas State University. She currently works with BOSU as a Regional Master Trainer helping other fitness professional enhace their skills. In addition, she holds her RYT 200, NASM- CPT, AFAA Primary, and TRX Suspension, Group, and Sports Medicine Certifications. When Alison isn’t inspiring fitness to the world, she is spending time outside with her two dogs and inspiring boyfriend, Danny.
-          .col-xs-12.col-sm-6.col-md-3.col-lg-3.col-xl-4
+          .col-xs-12.col-sm-6.col-md-3.col-lg-4.col-xl-4
             .thumbnail.info
               %img.img-responsive{:src => "https://energyxfitness.files.wordpress.com/2015/09/headshot_danny2.jpg"}
                 .caption
@@ -493,25 +492,25 @@
                   %p Danny has been working in the fitness industry for over 10 years. His passion for creative approaches to overall health and wellness and bettering the lives of everyone he meets makes him a vital part of EnergyX Fitness. Danny earned his Master’s degree from Texas State University – San Marcos in Professional Counseling, and is a National Certified Counselor (NCC). 
                   %p He has worked with and helped children, teens and adults make lifestyle changes to improve their quality of life. He earned his Bachelor’s degree in Psychology and Exercise Sports Science from Texas Wesleyan University. He also holds TRX suspension and sports medicine certifications, Indo-Row and Shockwave certifications, and is an Onnit Academy Level 1 Certified Trainer. In addition to the general public, Danny has worked intensely with athletes as well as physically disabled individuals. 
                   %p He has had the pleasure of working for Wounded Warrior Project for the past several years, first as the Physical Health and Wellness Coordinator and now as a Combat Stress Recovery Specialist.His spare is spent enjoying the great outdoors with Alison and their two dogs.
-          .col-xs-12.col-sm-6.col-md-3.col-lg-3.col-xl-4
+          .col-xs-12.col-sm-6.col-md-3.col-lg-4.col-xl-4
             .thumbnail.info
               %img.img-responsive{:src => "https://energyxfitness.files.wordpress.com/2015/09/1headshot_katheryn.jpg"}
                 .caption
                   %h4.text-center.bold Katheryn
                   %p Katheryn’s love for yoga began in 2012. Shortly after, she began her official training through YogaFit and began teaching yoga at UTSA Campus Recreation. Her vinyasa flow style class aims to help each participant celebrate their strengths, improve on their weaknesses, and find a sense of balance between resistance and relaxation. She aims to connect with each student throughout the class, and encourages everyone to reach their full potential.
-          .col-xs-12.col-sm-6.col-md-3.col-lg-3.col-xl-4
+          .col-xs-12.col-sm-6.col-md-3.col-lg-4.col-xl-4
             .thumbnail.info
               %img.img-responsive{:src => "https://energyxfitness.files.wordpress.com/2015/09/andrea1.jpg"}
                 .caption
                   %h4.text-center.bold Andrea Navarro
                   %p Andrea has been teaching Group Exercise for over 5 years. Her certifications include AFAA and YogaFit, among others in the fitness industry. She graduated from The University of Texas at Austin with a B.S. in Public Health and loves that she is able to encourage participants through their own health journey. She is known for her energetic teaching style and encouraging participants to reach goals and push limits. When away from the studio, Andrea is working on her MBA/MPH or spending time with her family.
-          .col-xs-12.col-sm-6.col-md-3.col-lg-3.col-xl-4
+          .col-xs-12.col-sm-6.col-md-3.col-lg-4.col-xl-4
             .thumbnail.info
               %img.img-responsive{:src => "https://energyxfitness.files.wordpress.com/2015/09/1headshot_alex.jpg"}
                 .caption
                   %h4.text-center.bold Alex Alcala
                   %p Alex Alcala is a six year Navy veteran and fitness enthusiast. As a U.S. Navy Fitness Leader, he has trained the our military’s men and women designing exercise programs that ensure their highest standards of physical fitness. After separating from the military, Alex enrolled at The University of Texas at San Antonio and has worked as a personal trainer for UTSA Campus Recreation, developing individualized instruction plans to match the skills and learning levels of participants.
-          .col-xs-12.col-sm-6.col-md-3.col-lg-3.col-xl-4
+          .col-xs-12.col-sm-6.col-md-3.col-lg-4.col-xl-4
             .thumbnail.info
               %img.img-responsive{:src => "https://energyxfitness.files.wordpress.com/2015/09/1headshot_lizy1.jpg"}
                 .caption
@@ -528,50 +527,100 @@
   .section-content
     .container
       .row
-        .col-md-12{"data-wow-delay" => "0.2s"}
+        .col-md-offset-2.col-md-8
           #quote-carousel.carousel.slide{"data-ride" => "carousel"}
             / Bottom Carousel Indicators
             %ol.carousel-indicators
               %li.active{"data-slide-to" => "0", "data-target" => "#quote-carousel"}
-                %img.img-responsive{:alt => "", :src => "https://s3.amazonaws.com/uifaces/faces/twitter/brad_frost/128.jpg"}
               %li{"data-slide-to" => "1", "data-target" => "#quote-carousel"}
-                %img.img-responsive{:alt => "", :src => "https://s3.amazonaws.com/uifaces/faces/twitter/rssems/128.jpg"}
               %li{"data-slide-to" => "2", "data-target" => "#quote-carousel"}
-                %img.img-responsive{:alt => "", :src => "https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"}
               %li{"data-slide-to" => "3", "data-target" => "#quote-carousel"}
-                %img.img-responsive{:alt => "", :src => "https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"}
             / Carousel Slides / Quotes
-            .carousel-inner.text-center
+            .carousel-inner
+              / Quote 1
               .item.active
                 %blockquote
                   .row
-                    .col-sm-8.col-sm-offset-2
-                      %p I absolutely love Energy X Fitness and actually look forward to my morning workouts. All of the instructors are so encouraging without being judgmental or cheesy. After having my son and having hip surgery afterwards, I needed something that could inspire me to work out on a routine basis again and lose some extra weight without causing more injuries – and I found exactly that with Energy X Fitness. The classes are challenging but doable, and it has been great to see the results and to enjoy this wonderful facility. I have lost inches, regained energy and feel like I truly belong to an awesome exercise community – I love my morning workout peeps and am so thankful I found this place! 
-                      %small Vanessa Russell-Evans
+                    .col-sm-12.text-center
+                      %img.img-circle.person-circle{style: "width:200px;height:200px;", src: asset_url('megg.jpg')}
+                    .col-sm-12
+                      .caption There are numerous reasons people go to the gym. If you're looking for a gym that is going to inspire you to be better this is where the magic happens; strength, endurance, mobility, and personal touch. I have participated in different fitness routines over the last 12 years. I was an all state powerlifter, half marathon runner, Crossfit athlete, and participated in Roller Derby. Strength is not built overnight, the studio has allowed me to become better. My back and core were out of commission prior to EnergyX. In the four short months I have been at the studio I have strengthen my entire body & lost 23 pounds, INJURY FREE! Endurance, prior to joining the studio I could barely run a mile (after training for numerous half marathons the last thing I wanted to do was run again). EnergyX helped me regain my endurance through rowing and my stamina is back to an all time high, who would have thought endurance building could be so fun! Mobility, I took for granted how important my mobility was prior to joining the studio. I can now balance (through all sorts of fun flexible yoga moves), I now look forward to yoga (which I dreaded in the past), and it has made me a more well rounded athlete. EnergyX may be the only Rowing studio in San Antonio but that's not why I go there.Personal touch; when I look for a gym, a box, or a studio I need to feel comfortable and most importantly wanted. The way these trainers truly care and take the time to get to know you is like no other.  What they are doing in this studio is magical and getting to feel like a part of that makes you feel powerful. This studio isn't worth checking out, it's worth becoming a part of. 
+                      %small.pull-right Megg Alvizo
+              / Quote 2
               .item
                 %blockquote
                   .row
-                    .col-sm-8.col-sm-offset-2
-                      %p I have been attending classes at EnergyX Fitness since its opening. What attracted me initially was the convenience of walking to the studio that is very near my home. What has kept me coming back is a team of experienced, professional instructors that work to ensure each client achieves his or her fitness goals. Alison, for example, through private physical training, helped me recover from an unrelated back injury, and she continues to encourage and push me to new levels. I appreciate the variety of class offerings that incorporate rowing, strength training and even yoga for a customized, comprehensive workout. 
-                      %small Michele McMurry
+                    .col-sm-12.text-center
+                      %img.img-circle.person-circle{style: "width:200px;height:200px;", src: asset_url('ramirez.jpg')}
+                    .col-sm-12
+                      .caption EnergyX is an amazing full body workout. I love the combination of rowers and TRX. I am seeing great results all over my body, and it's perfect cross training for my running. Not to mention the classes are a blast! 
+                      %small.pull-right Vanessa Ramirez
+              / Quote 3
               .item
                 %blockquote
                   .row
-                    .col-sm-8.col-sm-offset-2
-                      %p There are numerous reasons people go to the gym. If you're looking for a gym that is going to inspire you to be better this is where the magic happens; strength, endurance, mobility, and personal touch. I have participated in different fitness routines over the last 12 years. I was an all state powerlifter, half marathon runner, Crossfit athlete, and participated in Roller Derby. Strength is not built overnight, the studio has allowed me to become better. My back and core were out of commission prior to EnergyX. In the four short months I have been at the studio I have strengthen my entire body & lost 23 pounds, INJURY FREE! Endurance, prior to joining the studio I could barely run a mile (after training for numerous half marathons the last thing I wanted to do was run again). EnergyX helped me regain my endurance through rowing and my stamina is back to an all time high, who would have thought endurance building could be so fun! Mobility, I took for granted how important my mobility was prior to joining the studio. I can now balance (through all sorts of fun flexible yoga moves), I now look forward to yoga (which I dreaded in the past), and it has made me a more well rounded athlete. EnergyX may be the only Rowing studio in San Antonio but that's not why I go there. Personal touch; when I look for a gym, a box, or a studio I need to feel comfortable and most importantly wanted. The way these trainers truly care and take the time to get to know you is like no other.  What they are doing in this studio is magical and getting to feel like a part of that makes you feel powerful. This studio isn't worth checking out, it's worth becoming a part of. 
-                      %small Kimberly Gamboa
+                    .col-sm-12.text-center
+                      %img.img-circle.person-circle{style: "width:200px;height:200px;", src: asset_url('mcmurry.png')}
+                    .col-sm-12
+                      .caption I have been attending classes at EnergyX Fitness since its opening. What attracted me initially was the convenience of walking to the studio that is very near my home. What has kept me coming back is a team of experienced, professional instructors that work to ensure each client achieves his or her fitness goals. Alison, for example, through private physical training, helped me recover from an unrelated back injury, and she continues to encourage and push me to new levels. I appreciate the variety of class offerings that incorporate rowing, strength training and even yoga for a customized, comprehensive workout.
+                      %small.pull-right Michele McMurry
+              / Quote 4
               .item
                 %blockquote
                   .row
-                    .col-sm-8.col-sm-offset-2
-                      %p Before coming to Energy-X, neither of us really enjoyed exercise, or really knew much about it. We have grown to love coming to Energy-X 3-4 times a week because there is so much variety in the classes. We’ve both lost weight and increased our muscle tone, but our biggest takeaway is finding a positive community of people who have helped us like working out! 
-                      %small Stacey and Jonathan McAtee
-
+                    .col-sm-12.text-center
+                      %img.img-circle.person-circle{style: "width:200px;height:200px;", src: asset_url('kimberly_gamboa.jpg')}
+                    .col-sm-12
+                      .caption Energy X Fitness is a amazing place. The classes are challenging and exciting, but I have to say that the people keep me going back. The staff is friendly and motivating, and I always feel like I'm going to work out with a group of friends. Whether you're trying to beat your own time on the rower or squatting with sandbags, you need great people cheering you on.
+                      %small.pull-right Kimberly Gamboa
+              / Quote 5
+              .item
+                %blockquote
+                  .row
+                    .col-sm-12.text-center
+                      %img.img-circle.person-circle{style: "width:200px;height:200px;", src: asset_url('McAtees.jpg')}
+                    .col-sm-12
+                      .caption Before coming to Energy-X, neither of us really enjoyed exercise, or really knew much about it. We have grown to love coming to Energy-X 3-4 times a week because there is so much variety in the classes. We’ve both lost weight and increased our muscle tone, but our biggest takeaway is finding a positive community of people who have helped us like working out! 
+                      %small.pull-right Stacey and Jonathan McAtee
             / Carousel Buttons Next/Prev
             %a.left.carousel-control{"data-slide" => "prev", :href => "#quote-carousel"}
               %i.fa.fa-chevron-left
             %a.right.carousel-control{"data-slide" => "next", :href => "#quote-carousel"}
               %i.fa.fa-chevron-right
+
+%section#BgDiv3
+
+%section#Faq
+  .section-title
+    .row
+      .col-sm-12.col-md-12.col-lg-12
+        %h1.text-center.section-header FAQs
+  .section-content
+    .container
+      #accordion.panel-group
+        #panel1.panel.panel-primary
+          .panel-heading
+            %h4.panel-title
+              %a{"data-target" => "#collapseOne", "data-toggle" => "collapse", :href => "#collapseOne"}
+                Collapsible Group Item #1
+          #collapseOne.panel-collapse.collapse.in
+            .panel-body Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        #panel2.panel.panel-primary
+          .panel-heading
+            %h4.panel-title
+              %a.collapsed{"data-target" => "#collapseTwo", "data-toggle" => "collapse", :href => "#collapseTwo"}
+                Collapsible Group Item #2
+          #collapseTwo.panel-collapse.collapse
+            .panel-body Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+        #panel3.panel.panel-primary
+          .panel-heading
+            %h4.panel-title
+              %a.collapsed{"data-target" => "#collapseThree", "data-toggle" => "collapse", :href => "#collapseThree"}
+                Collapsible Group Item #3
+          #collapseThree.panel-collapse.collapse
+            .panel-body Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+%section#BgDiv3
 
 %section#Social
   .section-title
