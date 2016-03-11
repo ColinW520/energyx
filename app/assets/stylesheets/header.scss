@@ -23,11 +23,11 @@
 
     a {
       color: #fff !important;
-
-      &:hover {
-        color:  !important;
-      }
     }
+  }
+
+  .dropdown-menu {
+    background-color: #303030;
   }
 }
 
@@ -72,5 +72,11 @@
   }
   .navbar-toggle{
     bottom:-20px;
+  }
+}
+
+@media screen and (max-device-width : 480px) {
+  #NavLogo {
+    margin-top: 15px;
   }
 }
