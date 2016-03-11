@@ -39,38 +39,50 @@ body#static_pages_home{
     background-size: 100vw auto;
     min-height: 50vh;
   }
-  /* end home selector */
 
-    #Classes {
-    .panel-image {
-      position: relative;
-      overflow: hidden;
-      padding-bottom: 50%;
-    }
-
-    .panel-image img.panel-image-preview {
-      width: 100%;
-      border-radius: 4px 4px 0px 0px;
-      max-height: 250px;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      margin: auto;
-    }
-
-    .panel-body {
-      overflow: hidden;
-    }
+  #BgDiv4 {
+    background: url(asset-path('background_4.jpg')) no-repeat center center fixed;
+    background-size: 100vw auto;
+    min-height: 50vh;
   }
 
+  /* end home selector */
+
+  #Classes {
+  .panel-image {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 50%;
+  }
+
+  .panel-image img.panel-image-preview {
+    width: 100%;
+    border-radius: 4px 4px 0px 0px;
+    max-height: 250px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+
+  .panel-body {
+    overflow: hidden;
+  }
+}
+
   #Faq {
+    .panel-heading a {
+      text-decoration: none;
+    }
+
     .panel-heading a:after {
       font-family:'Glyphicons Halflings';
       content:"\e114";
       color: #fff;
       padding-left: 10px;
+      float: right;
     }
 
     .panel-heading a.collapsed:after {

@@ -469,6 +469,8 @@
                   %td $1400
                   %td= link_to 'Select', '#', class: 'btn btn-xs btn-success'
 
+%section#BgDiv4
+
 %section#Coaches
   .section-title
     .row
@@ -601,36 +603,83 @@
         #panel1.panel.panel-primary
           .panel-heading
             %h4.panel-title
-              %a{"data-target" => "#collapseOne", "data-toggle" => "collapse", :href => "#collapseOne"}
-                Collapsible Group Item #1
+              %a{"data-target" => "#collapseOne", "data-toggle" => "collapse"} Where are you located?
           #collapseOne.panel-collapse.collapse.in
-            .panel-body Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            .panel-body We are located at 5162 Broadway Street in Alamo Heights, Texas. We’re at the intersection of Broadway and Grove, right next to Nothin’ Bundt Cakes. (link to map/directions)
+
         #panel2.panel.panel-primary
           .panel-heading
             %h4.panel-title
-              %a.collapsed{"data-target" => "#collapseTwo", "data-toggle" => "collapse", :href => "#collapseTwo"}
-                Collapsible Group Item #2
+              %a.collapsed{"data-target" => "#collapseTwo", "data-toggle" => "collapse"} Do I need to register for class ahead of time?
           #collapseTwo.panel-collapse.collapse
-            .panel-body Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            .panel-body We highly recommend registering for class beforehand. This will ensure you a spot in class and help our staff better prepare for you. However, we gladly accept walk-ins as long as our class has room. (link to registration)
+
         #panel3.panel.panel-primary
           .panel-heading
             %h4.panel-title
-              %a.collapsed{"data-target" => "#collapseThree", "data-toggle" => "collapse", :href => "#collapseThree"}
-                Collapsible Group Item #3
+              %a.collapsed{"data-target" => "#collapseThree", "data-toggle" => "collapse"} I’ve never rowed before. Will I be able to do this?
           #collapseThree.panel-collapse.collapse
-            .panel-body Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            .panel-body Of course! Most people don’t have much experience on the rower. We will give you step-by-step instruction to get you feeling comfortable.
 
-%section#BgDiv3
+        #panel4.panel.panel-primary
+          .panel-heading
+            %h4.panel-title
+              %a.collapsed{"data-target" => "#collapseFour", "data-toggle" => "collapse"} Which class should I try first?
+          #collapseFour.panel-collapse.collapse
+            .panel-body We recommend PoweRow and IndoRow for your first class. If you enjoy yoga, Row & Flow is also an excellent first class. (link class names to class descriptions)
 
-%section#Social
-  .section-title
-    .row
-      .col-sm-12.col-md-12.col-lg-12
-        %h1.text-center.section-header Social
-  .section-content
-    .container
-      .row
-        .col-sm-12.col-md-12.col-lg-12
-          %p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-          %p
-            %a.btn.btn-default{:href => "#", :role => "button"} View details &raquo;
+        #panel5.panel.panel-primary
+          .panel-heading
+            %h4.panel-title
+              %a.collapsed{"data-target" => "#collapseFive", "data-toggle" => "collapse"} What is your late arrival/cancellation policy?
+          #collapseFive.panel-collapse.collapse
+            .panel-body You may cancel your reservation up to 12 hours before class without penalty. All other late cancels or no shows will be charged the session.
+
+        #panel6.panel.panel-primary
+          .panel-heading
+            %h4.panel-title
+              %a.collapsed{"data-target" => "#collapseSix", "data-toggle" => "collapse"} What if I have to leave class early?
+          #collapseSix.panel-collapse.collapse
+            .panel-body No problem, we want you to get your workout in and get where you need to be next in time. Just let your instructor know you’ll be leaving early so we aren’t surprised.
+
+        #panel7.panel.panel-primary
+          .panel-heading
+            %h4.panel-title
+              %a.collapsed{"data-target" => "#collapseSeven", "data-toggle" => "collapse"} Do you have showers?
+          #collapseSeven.panel-collapse.collapse
+            .panel-body Yes! We have two luxury showers. We also offer towels, shampoo, conditioner, and body wash.
+
+        #panel8.panel.panel-primary
+          .panel-heading
+            %h4.panel-title
+              %a.collapsed{"data-target" => "#collapseEight", "data-toggle" => "collapse"} What type of rowers do you use?
+          #collapseEight.panel-collapse.collapse
+            .panel-body We have state-of-the-art WaterRowers (Yes, the one you see in House of Cards and Biggest Loser).  The WaterRowers sleek designs features actual water which acts as the resistance. The resistance changes depending on how hard you work, not a setting you select, making the workout a truly custom experience.
+
+        #panel9.panel.panel-primary
+          .panel-heading
+            %h4.panel-title
+              %a.collapsed{"data-target" => "#collapseNine", "data-toggle" => "collapse"} Do you have other classes besides rowing?
+          #collapseNine.panel-collapse.collapse
+            .panel-body Yes, our PoweRow class incorporates the rower, TRX suspension trainer, and kettle bells. Shockwave is a circuit format using the rower, TRX, kettle bells, sand bags, medicine balls, and your own body weight. We also offer Yoga for the days you need a little recovery. Check out our class descriptions for more detail on each of our classes. (add link to descriptions)
+
+        #panel10.panel.panel-primary
+          .panel-heading
+            %h4.panel-title
+              %a.collapsed{"data-target" => "#collapseTen", "data-toggle" => "collapse", :href => "#collapseTen"} Do you offer personal training?
+          #collapseTen.panel-collapse.collapse
+            .panel-body Yes, we offer 30, 45, or 60 minute personal training sessions. Contact us for availability and pricing, alison@energyxfitness.com.
+
+        #panel11.panel.panel-primary
+          .panel-heading
+            %h4.panel-title
+              %a.collapsed{"data-target" => "#collapseEleven", "data-toggle" => "collapse"} Do you offer private group classes/events?
+          #collapseElevn.panel-collapse.collapse
+            .panel-body Yes, we can accommodate groups of up to 19 for private classes. Private classes are available anytime there is not already a scheduled class.
+
+        #panel12.panel.panel-primary
+          .panel-heading
+            %h4.panel-title
+              %a.collapsed{"data-target" => "#collapseTwelve", "data-toggle" => "collapse"} What should I wear/bring?
+          #collapseTwelve.panel-collapse.collapse
+            .panel-body Bring water, a positive attitude, and your workout face. Wear comfortable workout clothing and shoes. 
