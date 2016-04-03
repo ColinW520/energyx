@@ -23,25 +23,25 @@ body#static_pages_home{
   }
 
   #BgDiv1 {
-    background: url(asset-path('trx-lean.jpg')) no-repeat center center fixed;
+    background: url('https://farm2.staticflickr.com/1628/26124174732_174f717e8c.jpg') no-repeat center center fixed;
     background-size: 100vw auto;
     min-height: 50vh;
   }
 
   #BgDiv2 {
-    background: url(asset-path('yoga_wide.jpg')) no-repeat center center fixed;
+    background: url('https://farm2.staticflickr.com/1522/25943757080_bec1711f6b.jpg') no-repeat center center fixed;
     background-size: 100vw auto;
     min-height: 50vh;
   }
 
   #BgDiv3 {
-    background: url(asset-path('group.jpg')) no-repeat center center fixed;
+    background: url('https://farm2.staticflickr.com/1602/25943750730_eb0cf97e29.jpg') no-repeat center center fixed;
     background-size: 100vw auto;
     min-height: 50vh;
   }
 
   #BgDiv4 {
-    background: url(asset-path('background_4.jpg')) no-repeat center center fixed;
+    background: url('https://farm2.staticflickr.com/1628/26150329711_6be458900e.jpg') no-repeat center center fixed;
     background-size: 100vw auto;
     min-height: 50vh;
   }
@@ -92,7 +92,7 @@ body#static_pages_home{
 }
 
 #Tools {
-  background: url(asset-path('water_rower_background.png')) no-repeat center center fixed;
+  background: url('https://farm2.staticflickr.com/1717/26124148992_e2072e9a6c.jpg') no-repeat center center fixed;
   background-size: 100vw;
 }
 
@@ -147,6 +147,10 @@ body#static_pages_home{
   color: #fff;
 }
 
+.thumbnail img {
+  max-height: 500px;
+}
+
 .video-container .description .inner {
   font-size: 2em;
   font-weight: bold;
@@ -176,4 +180,22 @@ body#static_pages_home{
 
 .video-container video.fillWidth {
   width: 100%;
+}
+
+@media screen and (max-device-width : 480px) {
+  .video-container .title-container {
+    .inner {
+      font-size: 1.5em;
+    }
+
+    top: 10%;
+  }
+
+  #jumbo_logo {
+    width: 30%;
+  }
+
+  .icon-bar {
+    background-color: white;
+  }
 }
