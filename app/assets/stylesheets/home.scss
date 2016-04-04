@@ -139,6 +139,11 @@ body#static_pages_home{
   width: 100%;
 }
 
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+
 .video-container .title-container {
   z-index: 1000;
   position: absolute;

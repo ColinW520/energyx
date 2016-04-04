@@ -12,7 +12,7 @@
           %a.btn.btn-lg.btn-success.bold{:href => "https://clients.mindbodyonline.com/classic/home?studioid=226360", :role => "button"} Book A Class
           %a.btn.btn-lg.btn-success.bold{:href => "#Results", :role => "button"} See Results
       .filter
-      %video.loop.fullWidth{:autoplay => "autoplay", :loop => "loop", :poster => image_url('indo_row.jpg'), :style => "width:100%", :title => "EnergyX Background Video"}
+      %video.loop.fullWidth{:autoplay => "autoplay", :loop => "loop", :style => "width:100%", :title => "EnergyX Background Video"}
         %source{:src => asset_url("BGLoop_01.webm"), :type => "video/webm"}
         %source{:src => asset_url("BGLoop_01.ogv"), :type => "video/ogg"}
         %source{:src => asset_url("BGLoop_01.mp4")}
@@ -29,21 +29,16 @@
                 = succeed "" do
                   %strong.text-success free.
               %p Our dynamic classes will leave you feeling fit, empowered, and ready to achieve your goals. Try your first one for FREE today!
-              %form.form-horizontal
-                %fieldset
-                  .form-group.has-success
-                    .col-lg-12
-                      %input#inputName.form-control{:placeholder => "Name", :type => "text"}
-                  .form-group.has-success
-                    .col-lg-12
-                      %input#inputEmail.form-control{:placeholder => "Email", :type => "text"}
-                        .checkbox
-                          %label
-                            %input{:type => "checkbox"}
-                              Yes! Send me awesome emails
-                  .form-group
-                    .col-lg-12.text-center
-                      %button.btn.btn-success.bold{:type => "submit"} Schedule
+              = form_tag contact_path, method: 'post', html: {role: "form"} do
+                .form-group
+                  = text_field_tag :name, @name, placeholder: "Enter your name...", class: "form-control"
+                .form-group
+                  = text_field_tag :email, @email, placeholder: "Enter your email...", class: "form-control"
+                .form-group
+                  = hidden_field_tag :message, @message, value: 'Intersted in a free class!'
+                  = hidden_field_tag 'spam_check'
+                .pull-right
+                  %button.btn.btn-success.btn-lg{type: "submit"} Send
 
 %section#Schedule
   .section-title
@@ -416,7 +411,7 @@
               %h4.text-center IndoRow
               %p Fast-paced and engaging from the first minute, Indorow is the perfect calorie burn. Endurance, sprints, and team challenges will keep your heart pumping and body working. Come experience the best cardio on our state-of-the-art WaterRowers.
               .text-center
-                %a.btn.btn-lg.btn-success.bold{:href => 'https://clients.mindbodyonline.com/classic/ws?studioid=226360&stype=-7&sTG=22&sVT=16&sView=day', :role => "button"} Schedule
+                %a.btn.btn-lg.btn-info.bold{:href => 'https://clients.mindbodyonline.com/classic/ws?studioid=226360&stype=-7&sTG=22&sVT=16&sView=day', :role => "button"} Schedule
 
 %section#BgDiv2
 
@@ -530,6 +525,18 @@
                 .caption
                   %h4.text-center.bold Lizzy Holloway
                   %p Lizy Holloway is a certified AFAA group exercise and Schwinn cycle certified instructor who has been teaching since Spring of 2010. She has a Kinesiology degree from Texas A&M University where she was a group exercise instructor and personal trainer until 2014. Since, she has taught group exercise at The University of Texas at San Antonio. Lizy is also a 4-time TexFit presenter of multiple class formats including high intensity interval training and cycle. She is experienced in teaching cycle, step, water aerobics, total body toning classes, and high intensity interval training classes.
+          .col-xs-12.col-sm-6.col-md-3.col-lg-4.col-xl-4
+            .thumbnail.info
+              %img.img-responsive{:src => "https://farm2.staticflickr.com/1638/26130588422_ec328e65bd.jpg"}
+                .caption
+                  %h4.text-center.bold Maddie Duncan
+                  %p Maddie was first introduced to yoga during high school and practiced on and off until she began college at The University of Texas at San Antonio. She began practicing consistently and decided to get certified through YogaFit and AFAA in order to begin her coaching career. In addition to yoga, Maddie enjoys coaching and training in many different formats. Maddie has a B.S. in Kinesiology with a concentration in Athletic Medicine. She currently works at a physical therapy clinic as a technician where she coaches in rehabilitative exercise. She is planning to return to school in the near future in order to become a Physical Therapist.
+          .col-xs-12.col-sm-6.col-md-3.col-lg-4.col-xl-4
+            .thumbnail.info
+              %img.img-responsive{:src => "https://farm2.staticflickr.com/1660/26150094821_9cefab0e3c.jpg"}
+                .caption
+                  %h4.text-center.bold Sam
+                  %p Maddie was first introduced to yoga during high school and practiced on and off until she began college at The University of Texas at San Antonio. She began practicing consistently and decided to get certified through YogaFit and AFAA in order to begin her coaching career. In addition to yoga, Maddie enjoys coaching and training in many different formats. Maddie has a B.S. in Kinesiology with a concentration in Athletic Medicine. She currently works at a physical therapy clinic as a technician where she coaches in rehabilitative exercise. She is planning to return to school in the near future in order to become a Physical Therapist.
 
 %section#BgDiv3
 
@@ -547,7 +554,7 @@
             %ol.carousel-indicators
               %li.active{"data-slide-to" => "0", "data-target" => "#quote-carousel"}
               %li{"data-slide-to" => "1", "data-target" => "#quote-carousel"}
-              %li{"data-slide-to" => "2", "data-target" => "#quote-carousel"}
+              -# %li{"data-slide-to" => "2", "data-target" => "#quote-carousel"}
               %li{"data-slide-to" => "3", "data-target" => "#quote-carousel"}
               %li{"data-slide-to" => "4", "data-target" => "#quote-carousel"}
               %li{"data-slide-to" => "5", "data-target" => "#quote-carousel"}
@@ -581,15 +588,15 @@
                     .col-sm-12
                       .caption I have been attending classes at EnergyX Fitness since its opening. What attracted me initially was the convenience of walking to the studio that is very near my home. What has kept me coming back is a team of experienced, professional instructors that work to ensure each client achieves his or her fitness goals. Alison, for example, through private physical training, helped me recover from an unrelated back injury, and she continues to encourage and push me to new levels. I appreciate the variety of class offerings that incorporate rowing, strength training and even yoga for a customized, comprehensive workout.
                       %small.pull-right Michele McMurry
-              / Quote 2
-              .item
-                %blockquote
-                  .row
-                    .col-sm-12.text-center
-                      %img.img-circle.person-circle{style: "width:200px;height:200px;", src: asset_url('kimberly_gamboa.jpg')}
-                    .col-sm-12
-                      .caption Energy X Fitness is a amazing place. The classes are challenging and exciting, but I have to say that the people keep me going back. The staff is friendly and motivating, and I always feel like I'm going to work out with a group of friends. Whether you're trying to beat your own time on the rower or squatting with sandbags, you need great people cheering you on.
-                      %small.pull-right Kimberly Gamboa
+              -# / Quote 2
+              -# .item
+              -#   %blockquote
+              -#     .row
+              -#       .col-sm-12.text-center
+              -#         %img.img-circle.person-circle{style: "width:200px;height:200px;", src: asset_url('kimberly_gamboa.jpg')}
+              -#       .col-sm-12
+              -#         .caption Energy X Fitness is a amazing place. The classes are challenging and exciting, but I have to say that the people keep me going back. The staff is friendly and motivating, and I always feel like I'm going to work out with a group of friends. Whether you're trying to beat your own time on the rower or squatting with sandbags, you need great people cheering you on.
+              -#         %small.pull-right Kimberly Gamboa
               / Quote 3
               .item
                 %blockquote
@@ -608,7 +615,7 @@
                       %img.img-circle.person-circle{style: "width:200px;height:200px;", src: "https://farm2.staticflickr.com/1514/25945246410_608be3b78d_m.jpg" }
                     .col-sm-12
                       .caption Energy X workouts have been the perfect addition to my training plan. As a runner, I love rowing as a cross training activity because it works my whole body and and cardio system. These workouts are great for improving core strength, posture, and high heart-rate stamina. Most importantly, the balance exercises have really helped me stay injury-free. I wouldn't be achieving my fitness goals without them!
-                      %small.pull-right Kelly Leigh Johnson
+                      %small.pull-right Colin Hagan
 
               / Quote 4
               .item
@@ -618,7 +625,7 @@
                       %img.img-circle.person-circle{style: "width:200px;height:200px;", src: "https://farm2.staticflickr.com/1578/26152001221_61398f1646_m.jpg" }
                     .col-sm-12
                       .caption After a free clinic with Allison that introduced me to the WaterRower, I signed up for a week of classes! Now I have an unlimited monthly membership. I have delicate knees so the low-impact IndoRow classes are perfect for me. I stay off my knees and still get a really intense, full-body, cardio workout. You will get sweaty; you will have fun! The instructors each bring something different to the courses and are always looking out for rowing form and finding ways to challenge you
-                      %small.pull-right Colin Hagan
+                      %small.pull-right Kelly Leigh Johnson
             / Carousel Buttons Next/Prev
             %a.left.carousel-control{"data-slide" => "prev", :href => "#quote-carousel"}
               %i.fa.fa-chevron-left
@@ -716,3 +723,25 @@
               %a.collapsed{"data-target" => "#collapseTwelve", "data-toggle" => "collapse"} What should I wear/bring?
           #collapseTwelve.panel-collapse.collapse
             .panel-body Bring water, a positive attitude, and your workout face. Wear comfortable workout clothing and shoes. 
+
+%section.contact#Contact
+  .section-title
+    .row
+      .col-sm-12.col-md-12.col-lg-12
+        %h1.text-center.section-header Contact
+  .section-content
+    .row
+      .col-sm-9.col-md-9.col-lg-9.col-centered
+        .row
+          .col-sm-8.col-sm-offset-2.col-md-8.col-md-offset-2.col-lg-8.col-lg-offset-2
+            = form_tag contact_path, method: 'post', html: {role: "form"} do
+              .form-group
+                = text_field_tag :name, @name, placeholder: "Enter your name...", class: "form-control"
+              .form-group
+                = text_field_tag :email, @email, placeholder: "Enter your email...", class: "form-control"
+              .form-group
+                = text_area_tag :message, @message, placeholder: "Enter your message...", rows: 6, class: "form-control", style: "min-height: 100px;"
+              .form-group
+                = hidden_field_tag 'spam_check'
+              .pull-right
+                %button.btn.btn-success.btn-lg{type: "submit"} Send
