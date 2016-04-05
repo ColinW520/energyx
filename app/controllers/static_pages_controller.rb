@@ -28,7 +28,11 @@ class StaticPagesController < ApplicationController
     else
       ContactMailer.contact_message(@name, @email, @message).deliver
       flash[:success] = 'Your message was sent! We will get back to you shortly.'
-      redirect_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360'
+      if @message == 'Intersted in a free class!'
+        redirect_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360'
+      else
+        redirect_to root_path
+      end
     end
   end
 end
