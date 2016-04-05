@@ -22,7 +22,7 @@ class StaticPagesController < ApplicationController
     elsif @message.scan(/<a href=/).size > 0 || @message.scan(/\[url=/).size > 0 || @message.scan(/\[link=/).size > 0 || @message.scan(/http:\/\//).size > 0
       flash[:danger] = "Please don't include links. Spammers do this. Thank you for your understanding."
     else
-      ContactMailer.contact_message(@name, @email, @message)
+      ContactMailer.contact_message(@name, @email, @message).deliver
       flash[:success] = 'Your message was sent! We will get back to you shortly.'
     end
 
