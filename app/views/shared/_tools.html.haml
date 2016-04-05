@@ -1,0 +1,22 @@
+%section#Tools
+  .container
+    .row
+      .col-xs-12.col-sm-6.col-md-4.col-lg-4
+        .pull-right
+          .panel.panel-success#CallOutPanel
+            .panel-body
+              %h2
+                Your first class is
+                = succeed "" do
+                  %strong.text-success free.
+              %p Our dynamic classes will leave you feeling fit, empowered, and ready to achieve your goals. Try your first one for FREE today!
+              = form_tag contact_path, method: 'post', html: {role: "form"} do
+                .form-group
+                  = text_field_tag :name, @name, placeholder: "Enter your name...", class: "form-control"
+                .form-group
+                  = text_field_tag :email, @email, placeholder: "Enter your email...", class: "form-control"
+                .form-group
+                  = hidden_field_tag :message, @message, value: 'Intersted in a free class!'
+                  = hidden_field_tag 'spam_check'
+                .pull-right
+                  %button.btn.btn-success.btn-lg{type: "submit"} Send
