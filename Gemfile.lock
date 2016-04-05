@@ -304,6 +304,7 @@ DEPENDENCIES
   jquery-rails
   jquery-turbolinks
   launchy
+  mail
   mailcatcher
   momentjs-rails (>= 2.9.0)
   pg
