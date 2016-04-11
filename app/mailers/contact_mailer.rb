@@ -6,6 +6,6 @@ class ContactMailer < ActionMailer::Base
     @email = email
     @message = message
 
-    mail to: 'colinhagan@gmail.com', from: @email, subject: "New message from contact form on Energy X Fitness"
+    mail to: 'contact@energyxfitness.com', from: @email, subject: "New message from contact form on Energy X Fitness"
   end
 end
