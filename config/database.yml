@@ -18,9 +18,8 @@ development:
   encoding: unicode
   database: energyx_development
   pool:     5
-  username: energyx
+  username: colin
   password:
-  template: template0
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -46,16 +45,5 @@ test:
   encoding: unicode
   database: energyx_test
   pool:     5
-  username: energyx
+  username: colin
   password:
-  template: template0
-
-production:
-  adapter:  postgresql
-  host:     localhost
-  encoding: unicode
-  database: energyx_production
-  pool:     5
-  username: energyx
-  password:
-  template: template0
