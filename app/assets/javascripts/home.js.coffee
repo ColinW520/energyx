@@ -70,3 +70,12 @@ $(document).ready ->
     speed: 600
     moreLink: '<a class="text-center" href="#">More <i class="fa fa-chevron-circle-down"></i></a>'
     lessLink: '<a class="text-center" href="#">Less <i class="fa fa-chevron-circle-up"></a>'
+
+  $container = $('#masonry-container')
+  $container.imagesLoaded ->
+    $('#masonry-container').masonry
+      itemSelector: '.box'
+      columnWidth: 10
+      isAnimated: !Modernizr.csstransitions
+      isFitWidth: true
+    return

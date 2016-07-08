@@ -69,6 +69,20 @@
 -#         -#       .text-center
 -#         -#         %a.btn.btn-lg.btn-info.bold{:href => 'https://clients.mindbodyonline.com/classic/ws?studioid=226360&stype=-7&sVT=5&sView=day&sTrn=100000000&date=04/11/16', :role => "button"} Sign Up!
 
+%section#Instagram
+  .section-title
+    .row
+      .col-sm-12.col-md-12.col-lg-12
+        %h1.text-center.section-header The Latest
+  .section-content
+    .pinterest-layout
+      #wrapper
+        #masonry-container.transitions-enabled.clearfix
+          - @posts.each do |post|
+            .box.col3
+              %div
+                = post.oembed.html_safe
+
 %section#Schedule
   .section-title
     .row

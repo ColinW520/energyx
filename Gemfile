@@ -24,6 +24,9 @@ gem 'momentjs-rails', '>= 2.9.0'
 gem 'bootstrap3-datetimepicker-rails', '~> 4.17.37'
 gem 'readmorejs-rails'
 gem 'mail'
+gem 'httparty'
+gem 'masonry-rails'
+gem 'instagram'
 
 group :development do
   gem 'mailcatcher'

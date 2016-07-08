@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
+    @posts = SocialPost.order('created_at DESC')
   end
 
   def contact
