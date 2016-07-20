@@ -76,6 +76,12 @@
         %h1.text-center.section-header The Latest
   .section-content
     .pinterest-layout
+      .container
+        %a{href: 'https://clients.mindbodyonline.com/classic/ws?studioid=226360&stype=-7&sVT=22&sView=day&sLoc=0&date=07/21/16'}
+          .alert.alert-success
+            %strong Our Tim Duncan Tribute class is this Thursday, July 21, at 6PM. Join us!
+            %a.btn.btn-primary{href: 'https://clients.mindbodyonline.com/classic/ws?studioid=226360&stype=-7&sVT=22&sView=day&sLoc=0&date=07/21/16'} Sign Up!
+
       #wrapper
         #masonry-container.transitions-enabled.clearfix
           - @posts.each do |post|
