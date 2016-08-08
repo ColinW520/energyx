@@ -1,6 +1,10 @@
 class StaticPagesController < ApplicationController
   def home
-    @posts = SocialPost.order('created_at DESC')
+    @posts = SocialPost.order('created_at DESC').limit(4)
+  end
+
+  def jobs
+
   end
 
   def contact
