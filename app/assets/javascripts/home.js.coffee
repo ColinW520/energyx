@@ -36,6 +36,11 @@ scaleBannerVideoSize = (element) ->
     $('.homepage-hero-module .video-container video').addClass 'fadeIn animated'
 
 $(document).ready ->
+  # page is now ready, initialize the calendar...
+  $('#calendar').fullCalendar
+    events: '/calendar_feed'
+    defaultView: 'basicWeek'
+
   scaleVideoContainer()
   initBannerVideoSize '.video-container .poster img'
   initBannerVideoSize '.video-container .filter'

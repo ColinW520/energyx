@@ -37,10 +37,17 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.4.0)
+    akami (1.3.1)
+      gyoku (>= 0.4.0)
+      nokogiri
     arel (6.0.3)
     autoprefixer-rails (6.3.1)
       execjs
       json
+    axiom-types (0.1.1)
+      descendants_tracker (~> 0.0.4)
+      ice_nine (~> 0.11.0)
+      thread_safe (~> 0.3, >= 0.3.1)
     bcrypt (3.1.10)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -62,6 +69,8 @@ GEM
       xpath (~> 2.0)
     childprocess (0.5.9)
       ffi (~> 1.0, >= 1.0.11)
+    coercible (1.0.0)
+      descendants_tracker (~> 0.0.1)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.1.x)
@@ -73,6 +82,8 @@ GEM
     daemons (1.2.3)
     database_cleaner (1.5.1)
     debug_inspector (0.0.2)
+    descendants_tracker (0.0.4)
+      thread_safe (~> 0.3, >= 0.3.1)
     devise (3.5.5)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -85,6 +96,7 @@ GEM
       actionmailer (>= 3.2.6, < 5)
       devise (>= 3.2.0)
     diff-lcs (1.2.5)
+    equalizer (0.0.11)
     erb2haml (0.1.5)
       html2haml
     erubis (2.7.0)
@@ -106,8 +118,14 @@ GEM
       thor (~> 0.14)
     font-awesome-rails (4.5.0.0)
       railties (>= 3.2, < 5.0)
+    fullcalendar-rails (2.8.0.0)
+      jquery-rails (>= 4.0.5, < 5.0.0)
+      jquery-ui-rails (>= 5.0.2)
+      momentjs-rails (>= 2.9.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    gyoku (1.3.1)
+      builder (>= 2.1.2)
     haml (4.0.7)
       tilt
     haml-rails (0.9.0)
@@ -125,8 +143,12 @@ GEM
     httparty (0.13.7)
       json (~> 1.8)
       multi_xml (>= 0.5.2)
+    httpi (2.4.2)
+      rack
+      socksify
     hub (1.12.4)
     i18n (0.7.0)
+    ice_nine (0.11.2)
     instagram (1.1.6)
       faraday (>= 0.7, < 0.10)
       faraday_middleware (>= 0.8, < 0.10)
@@ -142,6 +164,8 @@ GEM
     jquery-turbolinks (2.1.0)
       railties (>= 3.1.0)
       turbolinks
+    jquery-ui-rails (5.0.5)
+      railties (>= 3.2.16)
     json (1.8.3)
     launchy (2.4.3)
       addressable (~> 2.3)
@@ -160,6 +184,10 @@ GEM
     masonry-rails (0.2.4)
       railties
     mime-types (2.99)
+    mindbody-api (1.0.1.alpha)
+      activesupport (>= 3.2.11)
+      savon (~> 2.11.0)
+      virtus (~> 1.0.0)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
     momentjs-rails (2.11.0)
@@ -169,6 +197,7 @@ GEM
     multipart-post (2.0.0)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
+    nori (2.6.0)
     orm_adapter (0.5.0)
     pg (0.18.4)
     puma (2.15.3)
@@ -241,6 +270,14 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    savon (2.11.1)
+      akami (~> 1.2)
+      builder (>= 2.1.2)
+      gyoku (~> 1.2)
+      httpi (~> 2.3)
+      nokogiri (>= 1.4.0)
+      nori (~> 2.4)
+      wasabi (~> 3.4)
     selenium-webdriver (2.49.0)
       childprocess (~> 0.5)
       multi_json (~> 1.0)
@@ -259,6 +296,7 @@ GEM
     skinny (0.2.4)
       eventmachine (~> 1.0.0)
       thin (>= 1.5, < 1.7)
+    socksify (1.7.0)
     spring (1.6.2)
     spring-commands-rspec (1.0.4)
       spring (>= 0.9.1)
@@ -284,8 +322,16 @@ GEM
     uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    virtus (1.0.5)
+      axiom-types (~> 0.1)
+      coercible (~> 1.0)
+      descendants_tracker (~> 0.0, >= 0.0.3)
+      equalizer (~> 0.0, >= 0.0.9)
     warden (1.2.4)
       rack (>= 1.0)
+    wasabi (3.5.0)
+      httpi (~> 2.0)
+      nokogiri (>= 1.4.2)
     web-console (2.2.1)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -314,6 +360,7 @@ DEPENDENCIES
   faker
   figaro
   font-awesome-rails (~> 4.5.0)
+  fullcalendar-rails
   haml-rails
   html2haml
   httparty
@@ -326,6 +373,7 @@ DEPENDENCIES
   mail
   mailcatcher
   masonry-rails
+  mindbody-api
   momentjs-rails (>= 2.9.0)
   pg
   puma

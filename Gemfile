@@ -27,6 +27,8 @@ gem 'mail'
 gem 'httparty'
 gem 'masonry-rails'
 gem 'instagram'
+gem 'mindbody-api'
+gem 'fullcalendar-rails'
 
 group :development do
   gem 'mailcatcher'

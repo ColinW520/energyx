@@ -41,22 +41,22 @@
                   %button.btn.btn-success.btn-lg{type: "submit"} Send
 
 %section#Events
-  .section-title
-    .row
-      .col-sm-12.col-md-12.col-lg-12
-        %h1.text-center.section-header Events
-  .section-content
-    .container
-      .row
-        .col-xs-12.col-sm-6.col-md-6.col-centered
-          .text-center
-            .panel.panel-default
-              .panel-image
-                %img.img-responsive.panel-image-preview{src: 'https://c1.staticflickr.com/9/8704/28573303980_0fc081028c_o.png', style: 'margin-left: auto; margin-right: auto;'}
-              .panel-body
-                %h4.text-center Mommy & Me
-                .text-center
-                  %a.btn.btn-lg.btn-info.bold{:href => 'https://clients.mindbodyonline.com/classic/ws?studioid=226360&stype=-8&sVT=21&sView=day&sLoc=0&date=08/20/16', :role => "button"} Sign Up!
+  -# .section-title
+  -#   .row
+  -#     .col-sm-12.col-md-12.col-lg-12
+  -#       %h1.text-center.section-header Events
+  -# .section-content
+  -#   .container
+  -#     .row
+  -#       .col-xs-12.col-sm-6.col-md-6.col-centered
+  -#         .text-center
+  -#           .panel.panel-default
+  -#             .panel-image
+  -#               %img.img-responsive.panel-image-preview{src: 'https://c1.staticflickr.com/9/8704/28573303980_0fc081028c_o.png', style: 'margin-left: auto; margin-right: auto;'}
+  -#             .panel-body
+  -#               %h4.text-center Mommy & Me
+  -#               .text-center
+  -#                 %a.btn.btn-lg.btn-info.bold{:href => 'https://clients.mindbodyonline.com/classic/ws?studioid=226360&stype=-8&sVT=21&sView=day&sLoc=0&date=08/20/16', :role => "button"} Sign Up!
 
 %section#Instagram
   .section-title
@@ -71,6 +71,15 @@
             .box.col3
               %div
                 = post.oembed.html_safe
+
+-# %section#TheCalendar
+-#   .section-title
+-#     .row
+-#       .col-sm-12.col-md-12.col-lg-12
+-#         %h1.text-center.section-header Calendar
+-#   .section-content
+-#     .container
+-#       #calendar
 
 %section#Schedule
   .section-title
@@ -510,8 +519,8 @@
               %img.img-responsive{:src => "https://farm2.staticflickr.com/1505/26123940282_3c86808b0d.jpg"}
                 .caption
                   %h4.text-center.bold Danny Galvan
-                  %p Danny has been working in the fitness industry for over 10 years. His passion for creative approaches to overall health and wellness and bettering the lives of everyone he meets makes him a vital part of EnergyX Fitness. Danny earned his Master’s degree from Texas State University – San Marcos in Professional Counseling, and is a National Certified Counselor (NCC). 
-                  %p He has worked with and helped children, teens and adults make lifestyle changes to improve their quality of life. He earned his Bachelor’s degree in Psychology and Exercise Sports Science from Texas Wesleyan University. He also holds TRX suspension and sports medicine certifications, Indo-Row and Shockwave certifications, and is an Onnit Academy Level 1 Certified Trainer. In addition to the general public, Danny has worked intensely with athletes as well as physically disabled individuals. 
+                  %p Danny has been working in the fitness industry for over 10 years. His passion for creative approaches to overall health and wellness and bettering the lives of everyone he meets makes him a vital part of EnergyX Fitness. Danny earned his Master’s degree from Texas State University – San Marcos in Professional Counseling, and is a National Certified Counselor (NCC).
+                  %p He has worked with and helped children, teens and adults make lifestyle changes to improve their quality of life. He earned his Bachelor’s degree in Psychology and Exercise Sports Science from Texas Wesleyan University. He also holds TRX suspension and sports medicine certifications, Indo-Row and Shockwave certifications, and is an Onnit Academy Level 1 Certified Trainer. In addition to the general public, Danny has worked intensely with athletes as well as physically disabled individuals.
                   %p He has had the pleasure of working for Wounded Warrior Project for the past several years, first as the Physical Health and Wellness Coordinator and now as a Combat Stress Recovery Specialist.His spare is spent enjoying the great outdoors with Alison and their two dogs.
           .col-xs-12.col-sm-6.col-md-3.col-lg-4.col-xl-4
             .thumbnail.info
@@ -574,7 +583,7 @@
                     .col-sm-12.text-center
                       %img.img-circle.person-circle{style: "width:200px;height:200px;", src: "https://farm2.staticflickr.com/1503/25943750740_f274d30683.jpg"}
                     .col-sm-12
-                      .caption There are numerous reasons people go to the gym. If you're looking for a gym that is going to inspire you to be better this is where the magic happens; strength, endurance, mobility, and personal touch. I have participated in different fitness routines over the last 12 years. I was an all state powerlifter, half marathon runner, Crossfit athlete, and participated in Roller Derby. Strength is not built overnight, the studio has allowed me to become better. My back and core were out of commission prior to EnergyX. In the four short months I have been at the studio I have strengthen my entire body & lost 23 pounds, INJURY FREE! Endurance, prior to joining the studio I could barely run a mile (after training for numerous half marathons the last thing I wanted to do was run again). EnergyX helped me regain my endurance through rowing and my stamina is back to an all time high, who would have thought endurance building could be so fun! Mobility, I took for granted how important my mobility was prior to joining the studio. I can now balance (through all sorts of fun flexible yoga moves), I now look forward to yoga (which I dreaded in the past), and it has made me a more well rounded athlete. EnergyX may be the only Rowing studio in San Antonio but that's not why I go there.Personal touch; when I look for a gym, a box, or a studio I need to feel comfortable and most importantly wanted. The way these trainers truly care and take the time to get to know you is like no other.  What they are doing in this studio is magical and getting to feel like a part of that makes you feel powerful. This studio isn't worth checking out, it's worth becoming a part of. 
+                      .caption There are numerous reasons people go to the gym. If you're looking for a gym that is going to inspire you to be better this is where the magic happens; strength, endurance, mobility, and personal touch. I have participated in different fitness routines over the last 12 years. I was an all state powerlifter, half marathon runner, Crossfit athlete, and participated in Roller Derby. Strength is not built overnight, the studio has allowed me to become better. My back and core were out of commission prior to EnergyX. In the four short months I have been at the studio I have strengthen my entire body & lost 23 pounds, INJURY FREE! Endurance, prior to joining the studio I could barely run a mile (after training for numerous half marathons the last thing I wanted to do was run again). EnergyX helped me regain my endurance through rowing and my stamina is back to an all time high, who would have thought endurance building could be so fun! Mobility, I took for granted how important my mobility was prior to joining the studio. I can now balance (through all sorts of fun flexible yoga moves), I now look forward to yoga (which I dreaded in the past), and it has made me a more well rounded athlete. EnergyX may be the only Rowing studio in San Antonio but that's not why I go there.Personal touch; when I look for a gym, a box, or a studio I need to feel comfortable and most importantly wanted. The way these trainers truly care and take the time to get to know you is like no other.  What they are doing in this studio is magical and getting to feel like a part of that makes you feel powerful. This studio isn't worth checking out, it's worth becoming a part of.
                       %small.pull-right Megg Alvizo
               / Quote 1
               .item
@@ -610,7 +619,7 @@
                     .col-sm-12.text-center
                       %img.img-circle.person-circle{style: "width:200px;height:200px;", src: "https://farm2.staticflickr.com/1711/25611859014_3a14108488_m.jpg"}
                     .col-sm-12
-                      .caption Before coming to Energy-X, neither of us really enjoyed exercise, or really knew much about it. We have grown to love coming to Energy-X 3-4 times a week because there is so much variety in the classes. We’ve both lost weight and increased our muscle tone, but our biggest takeaway is finding a positive community of people who have helped us like working out! 
+                      .caption Before coming to Energy-X, neither of us really enjoyed exercise, or really knew much about it. We have grown to love coming to Energy-X 3-4 times a week because there is so much variety in the classes. We’ve both lost weight and increased our muscle tone, but our biggest takeaway is finding a positive community of people who have helped us like working out!
                       %small.pull-right Stacey and Jonathan McAtee
 
               / Quote 4
@@ -728,7 +737,7 @@
             %h4.panel-title
               %a.collapsed{"data-target" => "#collapseTwelve", "data-toggle" => "collapse"} What should I wear/bring?
           #collapseTwelve.panel-collapse.collapse
-            .panel-body Bring water, a positive attitude, and your workout face. Wear comfortable workout clothing and shoes. 
+            .panel-body Bring water, a positive attitude, and your workout face. Wear comfortable workout clothing and shoes.
 
 %section.contact#Contact
   .section-title

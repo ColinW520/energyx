@@ -21,4 +21,5 @@
 //= require masonry/jquery.event-drag
 //= require masonry/jquery.imagesloaded.min
 //= require masonry/modernizr-transitions
+//= require fullcalendar
 //= require_tree .
