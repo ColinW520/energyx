@@ -1,5 +1,5 @@
-class MindBodyApi
-  def self.fetch_mindbody_schedule(*opts)
+class MindBodySchedule
+  def self.fetch(*opts)
     options = opts.extract_options!
     start_date = options[:start_date] || Date.today.beginning_of_week
     end_date = options[:end_date] || Date.today.end_of_week
@@ -10,8 +10,8 @@ class MindBodyApi
       'HideCanceledClasses' => true
     }
     message['ClientID'] = options[:user_id] unless options[:user_id].nil?
-    res = ClassService.get_classes(message)
-    classes =  res.result[:classes]
+    res = MindBody::Services::ClassService.get_classes(message)
+    classes = res.result[:classes]
     classes.sort!{|a,b| a.start_date_time <=> b.start_date_time}
     return classes
   end

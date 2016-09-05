@@ -12,7 +12,7 @@ class StaticPagesController < ApplicationController
     end_date = Time.at(params[:end].to_i).to_date
     time_zone_offset = 7 #fix MindBody lack of TZ support
 
-    courses = MindBodySchedules.fetch_mindbody_schedule(:start_date => start_date, :end_date => end_date)
+    courses = MindBodySchedule.fetch(:start_date => start_date, :end_date => end_date)
     response = []
     courses.each_with_index do |course,index|
       response << {
