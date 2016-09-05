@@ -29,6 +29,7 @@ gem 'masonry-rails'
 gem 'instagram'
 gem 'mindbody-api'
 gem 'fullcalendar-rails'
+gem 'certified'
 
 group :development do
   gem 'mailcatcher'
