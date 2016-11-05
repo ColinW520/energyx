@@ -108,7 +108,7 @@
           - @posts.each do |post|
             .box.col3
               %div
-                = post.oembed.html_safe
+                = post.html_safe
 
 -# %section#TheCalendar
 -#   .section-title
@@ -142,6 +142,13 @@
                   %td 5:45 AM
                   %td Row & Flow
                   %td 1 hour
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
+                %tr
+                  %td 8:30 AM
+                  %td IndowRow
+                  %td 45 mins
                   %td
                     = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
                       %i.fa.fa-calendar
@@ -238,6 +245,13 @@
                     = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
                       %i.fa.fa-calendar
                 %tr
+                  %td 8:30 AM
+                  %td TRX & Flex
+                  %td 45 mins
+                  %td
+                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
+                      %i.fa.fa-calendar
+                %tr
                   %td 12:15 PM
                   %td PoweRow
                   %td 45 mins
@@ -253,8 +267,8 @@
                       %i.fa.fa-calendar
                 %tr
                   %td 5:45 PM
-                  %td  TRX & Flex
-                  %td 45 Mins
+                  %td TRX & Flex
+                  %td 45 mins
                   %td
                     = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
                       %i.fa.fa-calendar
@@ -374,13 +388,6 @@
                   %td 8:45 AM
                   %td X-Factor Workout
                   %td 75 Mins
-                  %td
-                    = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
-                      %i.fa.fa-calendar
-                %tr
-                  %td 10:30 AM
-                  %td Powerow Intro
-                  %td 45 mins
                   %td
                     = link_to 'https://clients.mindbodyonline.com/classic/home?studioid=226360' do
                       %i.fa.fa-calendar
