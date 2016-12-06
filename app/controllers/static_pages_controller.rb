@@ -8,30 +8,6 @@ class StaticPagesController < ApplicationController
 
   end
 
-  def jobs
-
-  end
-
-  def calendar_feed
-    start_date = Time.at(params[:start].to_i).to_date
-    end_date = Time.at(params[:end].to_i).to_date
-    time_zone_offset = 7 #fix MindBody lack of TZ support
-
-    courses = MindBodySchedule.fetch(:start_date => start_date, :end_date => end_date)
-    response = []
-    courses.each_with_index do |course,index|
-      response << {
-        :id => index.to_s,
-        :title => "#{course.class_description.name}: #{course.staff.name}",
-        :start => (course.start_date_time + time_zone_offset.hours).to_i.to_s,
-        :end => (course.end_date_time + time_zone_offset.hours).to_i.to_s,
-        :allDay => false
-      }
-    end
-
-    render :json => response
-  end
-
   def contact
     @name = params[:name]
     @email = params[:email]

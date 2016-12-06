@@ -1,0 +1,10 @@
+.row
+  .col-sm-6.col-centered
+    .panel.panel-primary
+      .panel-heading.text-center
+        %h3{style: 'color: #fff; font-weight: 300'}
+          Resolve To Row
+        %h2{style: 'color: #fff;'}
+          = "#{@type.titleize} Registration"
+      .panel-body
+        = render 'form'

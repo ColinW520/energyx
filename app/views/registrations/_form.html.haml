@@ -1,0 +1,72 @@
+= nested_form_for @registration, html: { class: "basic-grey" } do |f|
+  = f.hidden_field :subtype, value: @type
+  - if @registration.errors.any?
+    .row
+      .col-sm-12
+        #error_explanation
+          %h2
+            = pluralize(@registration.errors.count, "error")
+            prohibited this registration from being saved:
+          %ul
+            - @registration.errors.full_messages.each do |message|
+              %li= message
+  .row
+    .col-sm-12
+      %h4
+        Details
+      .form-group
+        %label.control-label{for: 'inputName'} Name
+        = f.text_field :name, required: true, class: 'form-control', id: 'inputName', placeholder: @type == 'team' ? 'What shall we call your team?' : 'What is your name?'
+
+      .form-group
+        %label.control-label{for: 'inputPhone'} Phone
+        = f.text_field :phone, required: true, class: 'form-control', id: 'inputPhone', placeholder: 'In case we need to call you.'
+
+      .form-group
+        %label.control-label{for: 'inputEmail'} Email
+        = f.text_field :email, required: true, class: 'form-control', id: 'inputEmail', placeholder: 'We will send your registration confirmation to this address!'
+
+  - if @type == 'team'
+    .row
+      .col-sm-12
+        %h4
+          Team Members
+        .caption.text-danger
+          Teams require at least two members. Please
+          %strong do not
+          include yourself in this list!
+        %table.table
+          %thead
+            %tr
+              %th
+                Name
+              %th
+                Email
+              %th
+
+          %tbody#js-members
+            = f.fields_for :registration_members, wrapper: false do |ff|
+              %tr.fields
+                %td
+                  = ff.hidden_field :id
+                  = ff.text_field :name, :class => "form-control", :placeholder => 'Enter a name'
+                %td
+                  = ff.text_field :email, :class => "form-control", :placeholder => 'Enter an email'
+                %td
+                  = ff.link_to_remove :class => "btn btn-default btn-xs pull-right" do
+                    %i.fa.fa-times
+        = f.link_to_add :registration_members, :class => "btn btn-success btn-sm pull-right", :data => { :target => "#js-members" } do
+          %i.fa.fa-plus
+          Add Member
+
+  %br
+  %br
+  %hr
+  .row
+    .col-sm-12
+      .form-group.pull-right
+        .actions
+          %script.stripe-button{"data-amount" => params[:type] == 'team' ? 7000 : 4000, "data-panel-label" => "Pay {{amount}}", "data-label" => "Pay by Card", "data-image"=> asset_url('energyx_apple_touch_icon.png'), "data-description" => "Resolve to Row Registration", "data-key" => "#{Rails.application.secrets.stripe_publishable_key}", "data-locale" => "auto", "data-zip-code" => "true", "data-name" => "EnergyX", :src => "https://checkout.stripe.com/checkout.js"}
+      = link_to registrations_path, class: 'btn btn-default' do
+        %i.fa.fa-arrow-left
+        Cancel

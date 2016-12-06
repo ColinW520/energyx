@@ -11,10 +11,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160708144132) do
+ActiveRecord::Schema.define(version: 20161206181148) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "registration_members", force: :cascade do |t|
+    t.integer  "registration_id"
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  add_index "registration_members", ["registration_id"], name: "index_registration_members_on_registration_id", using: :btree
+
+  create_table "registrations", force: :cascade do |t|
+    t.boolean  "is_paid"
+    t.string   "name"
+    t.string   "subtype"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "phone"
+    t.string   "email"
+    t.string   "stripe_customer_id"
+    t.string   "stripe_charge_id"
+  end
 
   create_table "social_posts", force: :cascade do |t|
     t.string   "link"
@@ -59,4 +82,5 @@ ActiveRecord::Schema.define(version: 20160708144132) do
   add_index "users", ["invited_by_id"], name: "index_users_on_invited_by_id", using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "registration_members", "registrations"
 end

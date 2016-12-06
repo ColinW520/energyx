@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :registrations
   resources :social_posts, only: [:index, :create]
   resources :static_pages
   root to: 'static_pages#home'

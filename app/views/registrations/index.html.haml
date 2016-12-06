@@ -1,0 +1,38 @@
+.row
+  .col-sm-12
+    %img.img-responsive{:alt => "Resolve to Row", :src => "https://c2.staticflickr.com/6/5771/31092153840_207fc6e093_o.png", :width => "100%"}/
+
+.row
+  .col-sm-12
+    %h3.text-primary Description
+    %p Ring in the New Year and take part in the 2nd Annual Resolve to Row at EnergyX Fitness. Resolve to Row can be completed as a team or as an individual. Individual will row a 5k (5000 meters), teams will collectively row a 10K (10,000 meters). Fastest Male & Female individual, and fastest team will be awarded a special prize!
+
+    %h3.text-primary Price
+    %p $70 for team race (10k), $40 for Individual race (5k). Price includes registration, event shirt, and an awesome swag bag.
+
+    %h3.text-primary Time
+    %p Check-in beings at 7:15am. Competition begins at 8am.
+
+    %h3.text-primary Team Rules
+    %p Teams can have 2 - 4 people. Meters can be split however the team decides as long as each member rows at least 1000 meters.
+
+%br
+.row
+  .col-sm-3
+    = link_to 'Register Your Team', new_registration_path(type: 'team'), class: 'btn btn-lg btn-success'
+  .col-sm-3
+    = link_to 'Register Solo', new_registration_path(type: 'solo'), class: 'btn btn-lg btn-success'
+
+%br
+%br
+.row
+  .col-sm-6
+    %h3.text-primary Teams Registered
+    %table.table
+      %thead
+        %tr
+          %th Team Name
+      %tbody
+        - @registrations.each do |registration|
+          %tr
+            %td= registration.name

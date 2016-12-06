@@ -11,8 +11,8 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
-//= require turbolinks
 //= require bootstrap-sprockets
 //= require moment
 //= require bootstrap-datetimepicker
@@ -21,5 +21,5 @@
 //= require masonry/jquery.event-drag
 //= require masonry/jquery.imagesloaded.min
 //= require masonry/modernizr-transitions
-//= require fullcalendar
+//= require jquery_nested_form
 //= require_tree .

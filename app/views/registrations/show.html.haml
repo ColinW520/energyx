@@ -1,0 +1,47 @@
+
+.row
+  .col-sm-6.col-centered
+    %img.img-responsive{:alt => "Resolve to Row", :src => "https://c2.staticflickr.com/6/5538/31095034410_088a412d2e_o.png", :width => "100%"}
+
+%br
+.row
+  .col-sm-6.col-centered
+    .panel.panel-success
+      .panel-heading.text-center
+        %h3{style: 'color: #fff; font-weight: 300'}
+          Registration Confirmation
+      %table.table.table-striped
+        %tbody
+        %tr
+          %td Name
+          %td= @registration.name
+        %tr
+          %td Email
+          %td= @registration.email
+        %tr
+          %td Phone
+          %td= number_to_phone @registration.phone
+        - if @registration.subtype == 'team'
+          %tr
+            %td Members
+            %td
+              %ul
+                - @registration.members_list.each do |m|
+                  %li= m
+
+
+-# %p#notice= notice
+-#
+-# %p
+-#   %b Is paid:
+-#   = @registration.is_paid
+-# %p
+-#   %b Name:
+-#   = @registration.name
+-# %p
+-#   %b Subtype:
+-#   = @registration.subtype
+-#
+-# = link_to 'Edit', edit_registration_path(@registration)
+-# \|
+-# = link_to 'Back', registrations_path

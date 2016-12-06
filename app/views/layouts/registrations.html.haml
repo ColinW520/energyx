@@ -1,0 +1,39 @@
+!!!
+%html
+  %head
+    = favicon_link_tag 'favicon.png', rel: 'favicon', type: 'image/png'
+    = favicon_link_tag 'energyx_apple_touch_icon.png', rel: 'apple-touch-icon', type: 'image/png'
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+    %title= content_for?(:title) ? yield(:title) : 'EnergyX Fitness | San Antonio Fitness Classes'
+    %meta{:content => "#{content_for?(:description) ? yield(:description) : "San Antonio’s first rowing studio featuring ShockWave, IndoRow, TRX and Yoga. We offer a wide variety of classes available to any age and any fitness level sure to target your fitness needs."}", :name => "description"}
+    = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body{id: "#{controller_name}_#{action_name}", class: "#{controller_name}"}
+    = render 'shared/header'
+    .container{style: 'margin-top: 100px'}
+      .row
+        .col-sm-6.col-centered
+          = render 'layouts/messages'
+      = yield
+  :javascript
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-76055700-1', 'auto');
+    ga('send', 'pageview');
+  %script{:async => "", :defer => '', :src => "http://platform.instagram.com/en_US/embeds.js"}
+  :javascript
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-77252693-44', 'auto');
+    ga('send', 'pageview');
+  %footer.footer
+    .container.footer-text
+      = render 'shared/footer'

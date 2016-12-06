@@ -36,11 +36,6 @@ scaleBannerVideoSize = (element) ->
     $('.homepage-hero-module .video-container video').addClass 'fadeIn animated'
 
 $(document).ready ->
-  # page is now ready, initialize the calendar...
-  $('#calendar').fullCalendar
-    events: '/calendar_feed'
-    defaultView: 'basicWeek'
-
   scaleVideoContainer()
   initBannerVideoSize '.video-container .poster img'
   initBannerVideoSize '.video-container .filter'
@@ -61,15 +56,15 @@ $(document).ready ->
     window.document.location = $(this).data('href')
 
   # hide .navbar first
-  $('.navbar').hide()
+  $('.navbar').hide() unless $('#static_pages_home').length < 1
   # fade in .navbar
   $(window).scroll ->
-    # set distance user needs to scroll before we fadeIn navbar
-    if $(this).scrollTop() > $('.video-container').height() - 100
-      $('.navbar').fadeIn()
-    else
-      $('.navbar').fadeOut()
-
+    if $('#static_pages_home').length > 0
+      # set distance user needs to scroll before we fadeIn navbar
+      if $(this).scrollTop() > $('.video-container').height() - 100
+        $('.navbar').fadeIn()
+      else
+        $('.navbar').fadeOut()
 
   $('.caption').readmore
     speed: 600
