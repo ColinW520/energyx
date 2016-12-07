@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161206181148) do
+ActiveRecord::Schema.define(version: 20161207163615) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20161206181148) do
     t.string   "phone"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "shirt_size"
   end
 
   add_index "registration_members", ["registration_id"], name: "index_registration_members_on_registration_id", using: :btree
@@ -37,6 +38,7 @@ ActiveRecord::Schema.define(version: 20161206181148) do
     t.string   "email"
     t.string   "stripe_customer_id"
     t.string   "stripe_charge_id"
+    t.string   "shirt_size"
   end
 
   create_table "social_posts", force: :cascade do |t|

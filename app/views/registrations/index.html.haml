@@ -25,14 +25,38 @@
 
 %br
 %br
-.row
-  .col-sm-6
-    %h3.text-primary Teams Registered
-    %table.table
-      %thead
-        %tr
-          %th Team Name
-      %tbody
-        - @registrations.each do |registration|
+- if params[:special] == 'RowHustle'
+  .row
+    .col-sm-6
+      %h3.text-primary Teams Registered
+      %table.table
+        %thead
           %tr
-            %td= registration.name
+            %th Team Name
+            %th Type
+            %th Members
+            %th
+        %tbody
+          - @registrations.each do |registration|
+            %tr
+              %td= registration.name
+              %td= registration.subtype
+              %td
+                %ul
+                  - registration.members_list.each do |m|
+                    %li= m
+              %td
+                = link_to edit_registration_path(registration) do
+                  %i.fa.fa-edit
+- else
+  .row
+    .col-sm-6
+      %h3.text-primary Teams Registered
+      %table.table
+        %thead
+          %tr
+            %th Team Name
+        %tbody
+          - @registrations.each do |registration|
+            %tr
+              %td= registration.name

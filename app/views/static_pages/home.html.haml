@@ -44,57 +44,17 @@
   .section-title
     .row
       .col-sm-12.col-md-12.col-lg-12
-        %h1.text-center.section-header Anniversary T's
-        %p.text-center To celebrate our first year of EnergyX we have made some awesome t-shirts. Reserve yours today!
-  %br
+        %h1.text-center.section-header Events
   .section-content
     .container
       .row
-        .col-xs-12.col-sm-4.col-md-4
+        .col-sm-12
+          %a{href: registrations_path}
+            %img.img-responsive{:alt => "Resolve to Row", :src => "https://c2.staticflickr.com/6/5771/31092153840_207fc6e093_o.png", :width => "100%"}/
+          %br
           .text-center
-            .panel.panel-default
-              .panel-image
-                %img.img-responsive.panel-image-preview{src: 'https://c4.staticflickr.com/8/7531/29942296651_cf986d1e2d_o.jpg', style: 'margin-left: auto; margin-right: auto;'}
-              .panel-body
-                %h4.text-center Women's RowVolution
-                .text-center
-                  %a.btn.btn-lg.btn-info.bold{:href => "mailto:alison@energyxfitness.com?subject=TShirt%20Order&body=womens%20rowvolution%20%tank", :role => "button"} Order
-        .col-xs-12.col-sm-4.col-md-4
-          .text-center
-            .panel.panel-default
-              .panel-image
-                %img.img-responsive.panel-image-preview{src: 'https://c3.staticflickr.com/9/8769/29991572826_bbf90f5a56_o.jpg', style: 'margin-left: auto; margin-right: auto;'}
-              .panel-body
-                %h4.text-center Men's RowVolution
-                .text-center
-                  %a.btn.btn-lg.btn-info.bold{:href => "mailto:alison@energyxfitness.com?subject=TShirt%20Order&body=mens%20rowvolution", :role => "button"} Order
-        .col-xs-12.col-sm-4.col-md-4
-          .text-center
-            .panel.panel-default
-              .panel-image
-                %img.img-responsive.panel-image-preview{src: 'https://c3.staticflickr.com/6/5567/29991572866_a37bf7eff0_o.jpg', style: 'margin-left: auto; margin-right: auto;'}
-              .panel-body
-                %h4.text-center Men's EXF
-                .text-center
-                  %a.btn.btn-lg.btn-info.bold{:href => "mailto:alison@energyxfitness.com?subject=TShirt%20Order&body=mens%20exf", :role => "button"} Order
-        .col-xs-12.col-sm-4.col-md-4.col-offset-4
-          .text-center
-            .panel.panel-default
-              .panel-image
-                %img.img-responsive.panel-image-preview{src: 'https://c5.staticflickr.com/9/8562/29991572796_af03f0ed89_o.jpg', style: 'margin-left: auto; margin-right: auto;'}
-              .panel-body
-                %h4.text-center Men's Skyline
-                .text-center
-                  %a.btn.btn-lg.btn-info.bold{:href => "mailto:alison@energyxfitness.com?subject=TShirt%20Order&body=mens%20skyline", :role => "button"} Order
-        .col-xs-12.col-sm-4.col-md-4.col-offset-4
-          .text-center
-            .panel.panel-default
-              .panel-image
-                %img.img-responsive.panel-image-preview{src: 'https://c7.staticflickr.com/9/8056/29991572766_a8dd5d65ed_o.jpg', style: 'margin-left: auto; margin-right: auto;'}
-              .panel-body
-                %h4.text-center Women's Skyline Tank
-                .text-center
-                  %a.btn.btn-lg.btn-info.bold{:href => "mailto:alison@energyxfitness.com?subject=TShirt%20Order&body=womens%20skyline%20%tank", :role => "button"} Order
+            = link_to 'Learn More', registrations_path, class: 'btn btn-xl btn-success'
+
 
 %section#Instagram
   .section-title

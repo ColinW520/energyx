@@ -5,6 +5,6 @@
         %h3{style: 'color: #fff; font-weight: 300'}
           Resolve To Row
         %h2{style: 'color: #fff;'}
-          = "#{@type.titleize} Registration"
+          = "#{@type.titleize} Registration" rescue 'New Registration'
       .panel-body
         = render 'form'

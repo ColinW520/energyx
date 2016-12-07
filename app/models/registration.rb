@@ -8,6 +8,6 @@ class Registration < ActiveRecord::Base
   validates :stripe_charge_id, presence: true
 
   def members_list
-    self.registration_members.map { |member| member.name }
+    self.registration_members.map { |member| "#{member.name} | #{member.shirt_size}" }
   end
 end
