@@ -8,8 +8,9 @@
         %span.icon-bar{style: 'background-color: white;'}
         %span.icon-bar{style: 'background-color: white;'}
       .navbar-brand.navbar-brand-centered
-        %img#NavLogo{:src => asset_url('energyx_icon_white.png')}
-        %div{:style => "clear:both;"}
+        %a{href: root_path}
+          %img#NavLogo{:src => asset_url('energyx_icon_white.png')}
+          %div{:style => "clear:both;"}
     / Collect the nav links, forms, and other content for toggling
     #navbar-brand-centered.collapse.navbar-collapse
       %ul.nav.navbar-nav.navbar-left
@@ -21,19 +22,19 @@
             %i.fa.fa-map-marker
       %ul.nav.navbar-nav.navbar-right
         %li
-          %a{:href => "#Schedule"} Schedule
+          %a{:href => "http://energyxfintess.com#Schedule"} Schedule
         %li
-          %a{:href => "#Results"} Results
+          %a{:href => "http://energyxfintess.com#Results"} Results
         %li.dropdown
           %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
             About
             %b.caret
           %ul.dropdown-menu
             %li
-              %a{:href => "#Faq"} FAQs
+              %a{:href => "http://energyxfintess.com#Faq"} FAQs
             %li
-              %a{:href => "#Coaches"} Coaches
+              %a{:href => "http://energyxfintess.com#Coaches"} Coaches
             %li
-              %a{:href => "#Memberships"} Memberships
+              %a{:href => "http://energyxfintess.com#Memberships"} Memberships
     / /.navbar-collapse
   / /.container-fluid
