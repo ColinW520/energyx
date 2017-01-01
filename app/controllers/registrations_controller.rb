@@ -34,7 +34,7 @@ class RegistrationsController < ApplicationController
     @registration = Registration.new(registration_params)
 
     # Amount in cents
-    @amount = @registration.subtype == 'team' ? 7000 : 4000
+    @amount = @registration.subtype == 'team' ? 9000 : 5000
 
     customer = Stripe::Customer.create(
       :email => params[:stripeEmail],

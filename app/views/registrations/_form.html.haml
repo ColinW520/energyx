@@ -74,7 +74,7 @@
     .col-sm-12
       .form-group.pull-right
         .actions
-          %script.stripe-button{"data-amount" => params[:type] == 'team' ? 7000 : 4000, "data-panel-label" => "Pay {{amount}}", "data-label" => "Pay by Card", "data-image"=> asset_url('energyx_apple_touch_icon.png'), "data-description" => "Resolve to Row Registration", "data-key" => "#{Rails.application.secrets.stripe_publishable_key}", "data-locale" => "auto", "data-zip-code" => "true", "data-name" => "EnergyX", :src => "https://checkout.stripe.com/checkout.js"}
+          %script.stripe-button{"data-amount" => params[:type] == 'team' ? 9000 : 5000, "data-panel-label" => "Pay {{amount}}", "data-label" => "Pay by Card", "data-image"=> asset_url('energyx_apple_touch_icon.png'), "data-description" => "Resolve to Row Registration", "data-key" => "#{Rails.application.secrets.stripe_publishable_key}", "data-locale" => "auto", "data-zip-code" => "true", "data-name" => "EnergyX", :src => "https://checkout.stripe.com/checkout.js"}
       = link_to registrations_path, class: 'btn btn-default' do
         %i.fa.fa-arrow-left
         Cancel
