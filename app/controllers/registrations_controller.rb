@@ -15,12 +15,13 @@ class RegistrationsController < ApplicationController
 
   # GET /registrations/new
   def new
-    @type = params[:type]
-    @registration = Registration.new(subtype: params[:type])
-
-    if @type == 'team'
-      2.times do @registration.registration_members.build end
-    end
+    redirect_to root_path, notice: 'Registration is Closed at this time.'
+    # @type = params[:type]
+    # @registration = Registration.new(subtype: params[:type])
+    #
+    # if @type == 'team'
+    #   2.times do @registration.registration_members.build end
+    # end
   end
 
   # GET /registrations/1/edit
@@ -36,25 +37,26 @@ class RegistrationsController < ApplicationController
     # Amount in cents
     @amount = @registration.subtype == 'team' ? 9000 : 5000
 
-    customer = Stripe::Customer.create(
-      :email => params[:stripeEmail],
-      :source  => params[:stripeToken]
-    )
-
-    charge = Stripe::Charge.create(
-      :customer    => customer.id,
-      :amount      => @amount,
-      :description => 'EnergyX Resolve To Row',
-      :currency    => 'usd'
-    )
-
-    @registration.is_paid = true if customer && charge
-    @registration.stripe_customer_id = customer.id
-    @registration.stripe_charge_id = charge.id
+    # Disabled for now,
+    # customer = Stripe::Customer.create(
+    #   :email => params[:stripeEmail],
+    #   :source  => params[:stripeToken]
+    # )
+    #
+    # charge = Stripe::Charge.create(
+    #   :customer    => customer.id,
+    #   :amount      => @amount,
+    #   :description => 'EnergyX Resolve To Row',
+    #   :currency    => 'usd'
+    # )
+    #
+    # @registration.is_paid = true if customer && charge
+    # @registration.stripe_customer_id = customer.id
+    # @registration.stripe_charge_id = charge.id
 
     respond_to do |format|
       if @registration.save
-        format.html { redirect_to @registration, notice: 'We have successfully created your registration! Your card has also been chared. Please Print this page for your records.' }
+        format.html { redirect_to @registration, notice: 'We have successfully created your registration! You card HAS NOT BEEN CHARGED. Please Print this page for your records.' }
         format.json { render :show, status: :created, location: @registration }
       else
         format.html { render :new }
