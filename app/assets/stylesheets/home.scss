@@ -1,4 +1,7 @@
 body#static_pages_home{
+  #JumboLead {
+    min-height: 105vh;
+  }
   /* Carousel */
   #jumbo_logo {
     width: 50%;
@@ -6,6 +9,10 @@ body#static_pages_home{
 
   #Results {
     min-height: 60vh;
+  }
+
+  #Instagram {
+    min-height: 105vh;
   }
 
   .homepage-hero-module {
@@ -147,7 +154,7 @@ body#static_pages_home{
 .video-container .title-container {
   z-index: 1000;
   position: absolute;
-  top: 35%;
+  top: 15%;
   text-align: center;
   color: #fff;
 }
@@ -197,7 +204,7 @@ body#static_pages_home{
   }
 
   #jumbo_logo {
-    width: 30%;
+    width: 25%;
   }
 
   .icon-bar {

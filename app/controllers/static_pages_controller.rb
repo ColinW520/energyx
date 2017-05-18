@@ -2,9 +2,9 @@ class StaticPagesController < ApplicationController
   def home
     #@posts = SocialPost.order('created_at DESC').limit(4)
     client = Instagram.client(access_token: ENV['INSTAGRAM_TOKEN'])
-    @posts = client.user_recent_media.first(8).map do |post|
+    @posts = client.user_recent_media.first(4).map do |post|
       HTTParty.get("https://api.instagram.com/oembed?url=#{post['link']}&omitscript=true")['html']
-    end
+    end rescue []
 
   end
 

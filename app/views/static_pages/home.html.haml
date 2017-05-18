@@ -3,14 +3,16 @@
   .homepage-hero-module
     .video-container
       .title-container
-        .headline.center-block
+        .headline
           = image_tag 'energyx_logo_white.png', class: 'img-responsive center-block', id: 'jumbo_logo'
           %br
         .description.center-block
           .inner Welcome to EnergyX Fitness, San Antonio’s first rowing studio featuring ShockWave, Kettlebell, Body Weight Training, IndoRow, TRX and Yoga. Start with your first free class today and get unlimited classes for a week for just $30!
+          %br
+            %a.btn.btn-xl.btn-success.bold{:href => "https://clients.mindbodyonline.com/classic/ws?studioid=226360&stype=-7&sView=week", :role => "button"} Book A Class
+            %a.btn.btn-xl.btn-success.bold{:href => "#Results", :role => "button"} See Results
         %br
-          %a.btn.btn-lg.btn-success.bold{:href => "https://clients.mindbodyonline.com/classic/ws?studioid=226360&stype=-7&sView=week", :role => "button"} Book A Class
-          %a.btn.btn-lg.btn-success.bold{:href => "#Results", :role => "button"} See Results
+        %br
       .filter
       %video.loop.fullWidth{:autoplay => "autoplay", :loop => "loop", poster: 'https://farm2.staticflickr.com/1514/26124162412_1e0f33f75c.jpg', :style => "width:100%", :title => "EnergyX Background Video"}
         %source{:src => asset_url("BGLoop_01.webm"), :type => "video/webm"}
@@ -31,8 +33,10 @@
               %p Our dynamic classes will leave you feeling fit, empowered, and ready to achieve your goals. Try your first one for FREE today!
               = form_tag contact_path, method: 'post', html: {role: "form"} do
                 .form-group
+                  %label.control-label Name
                   = text_field_tag :name, @name, placeholder: "Enter your name...", class: "form-control"
                 .form-group
+                  %label.control-label Email
                   = text_field_tag :email, @email, placeholder: "Enter your email...", class: "form-control"
                 .form-group
                   = hidden_field_tag :message, @message, value: 'Intersted in a free class!'
@@ -393,16 +397,16 @@
   .section-content
     .container
       .row
-        .col-xs-12.col-sm-6.col-md-4
-          .panel.panel-default
-            .panel-image
-              %img.img-responsive.panel-image-preview{src: 'https://farm2.staticflickr.com/1688/26150319791_da92a533ed.jpg'}
-            .panel-body
-              %h4.text-center Row Clinic
-              %p New to rowing or want to improve you stroke? Row Clinic is the place to be. Always free and a great place for new participants to start.
-              %br
-              .text-center
-                %a.btn.btn-lg.btn-info.bold{:href => 'https://clients.mindbodyonline.com/classic/ws?studioid=226360&stype=-7&sTG=22&sVT=9&sView=day', :role => "button"} Schedule
+        -# .col-xs-12.col-sm-6.col-md-4
+        -#   .panel.panel-default
+        -#     .panel-image
+        -#       %img.img-responsive.panel-image-preview{src: 'https://farm2.staticflickr.com/1688/26150319791_da92a533ed.jpg'}
+        -#     .panel-body
+        -#       %h4.text-center Row Clinic
+        -#       %p New to rowing or want to improve you stroke? Row Clinic is the place to be. Always free and a great place for new participants to start.
+        -#       %br
+        -#       .text-center
+        -#         %a.btn.btn-lg.btn-info.bold{:href => 'https://clients.mindbodyonline.com/classic/ws?studioid=226360&stype=-7&sTG=22&sVT=9&sView=day', :role => "button"} Schedule
         .col-xs-12.col-sm-6.col-md-4
           .panel.panel-default
             .panel-image
@@ -764,26 +768,27 @@
     .row
       .col-sm-12.col-md-12.col-lg-12
         %h1.text-center.section-header Contact
+        %p.lead.text-center Questions? Get in touch with us.
   .section-content
     .row
       .col-sm-9.col-md-9.col-lg-9.col-centered
         .row
-          .col-sm-8.col-sm-offset-2.col-md-8.col-md-offset-2.col-lg-8.col-lg-offset-2
+          .col-sm-8.col-sm-offset-2.col-md-8.col-md-offset-2.col-lg-8.col-lg-offset-2.well
             = form_tag contact_path, method: 'post', html: {role: "form"} do
               .form-group
-                %label Name
+                %label.control-label Name
                 = text_field_tag :name, @name, placeholder: "Enter your name...", class: "form-control"
               .form-group
-                %label Email
+                %label.control-label Email
                 = text_field_tag :email, @email, placeholder: "Enter your email...", class: "form-control"
               %br
               %br
               %br
               %br
               .form-group
-                %label Email
+                %label.control-label Message
                 = text_area_tag :message, @message, placeholder: "Enter your message...", rows: 2, class: "form-control", style: "min-height: 100px;"
               .form-group
                 = hidden_field_tag 'spam_check', value: 'gotcha.'
               .pull-right
-                %button.btn.btn-success.btn-lg{type: "submit"} Send
+                = submit_tag 'Submit', class: 'btn btn-block btn-success btn-lg'
