@@ -67,7 +67,7 @@
         #masonry-container.transitions-enabled.clearfix
           - @posts.each do |post|
             .box.col3
-              %div
+              %div{style: 'margin: 10px;'}
                 = post.html_safe
 
 %section#Schedule
