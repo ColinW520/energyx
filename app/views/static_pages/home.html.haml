@@ -771,16 +771,19 @@
           .col-sm-8.col-sm-offset-2.col-md-8.col-md-offset-2.col-lg-8.col-lg-offset-2
             = form_tag contact_path, method: 'post', html: {role: "form"} do
               .form-group
+                %label Name
                 = text_field_tag :name, @name, placeholder: "Enter your name...", class: "form-control"
               .form-group
+                %label Email
                 = text_field_tag :email, @email, placeholder: "Enter your email...", class: "form-control"
               %br
               %br
               %br
               %br
               .form-group
+                %label Email
                 = text_area_tag :message, @message, placeholder: "Enter your message...", rows: 2, class: "form-control", style: "min-height: 100px;"
               .form-group
-                = hidden_field_tag 'spam_check'
+                = hidden_field_tag 'spam_check', value: 'gotcha.'
               .pull-right
                 %button.btn.btn-success.btn-lg{type: "submit"} Send

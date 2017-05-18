@@ -17,6 +17,6 @@
                   = text_field_tag :email, @email, placeholder: "Enter your email...", class: "form-control"
                 .form-group
                   = hidden_field_tag :message, @message, value: 'Intersted in a free class!'
-                  = hidden_field_tag 'spam_check'
+                  = hidden_field_tag 'spam_check', value: 'gotcha.'
                 .pull-right
                   %button.btn.btn-success.btn-lg{type: "submit"} Send
