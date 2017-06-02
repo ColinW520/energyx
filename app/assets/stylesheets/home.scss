@@ -56,23 +56,24 @@ body#static_pages_home{
   /* end home selector */
 
   #Classes {
-  .panel-image {
-    position: relative;
-    overflow: hidden;
-    padding-bottom: 50%;
-  }
 
-  .panel-image img.panel-image-preview {
-    width: 100%;
-    border-radius: 4px 4px 0px 0px;
-    max-height: 250px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-  }
+    .panel-image {
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 50%;
+    }
+
+    .panel-image img.panel-image-preview {
+      width: 100%;
+      border-radius: 4px 4px 0px 0px;
+      max-height: 250px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
 
   .panel-body {
     overflow: hidden;
